@@ -11,7 +11,7 @@ const props = {
 
 export const input = () => <Input {...props} />;
 
-export const defaultValue = () => <Input {...props} defaultValue="上条百合奈" />;
+export const defaultValue = () => <Input {...props} defaultValue="遠藤さくら" />;
 defaultValue.story = {
   name: 'デフォルト値',
 };

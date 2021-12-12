@@ -1,29 +1,51 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components'; // 追加する
+import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import VideosListTemplate from '~/components/templates/VideosListTemplate';
+import Header from '~/components/organisms/Header';
+import SearchForm from '~/components/organisms/SearchForm';
+import VideosList from '~/components/organisms/VideosList';
 
-// ここから追加する
-const Root = styled.div`
-  background: #e5e5e5;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-`;
+export const TopPagePresenter = ({
+  search,
+  searchNext,
+  defaultKeyword,
+  videos,
+  loading,
+}) => (
+  <VideosListTemplate
+    headerContents={<Header/>}
+    searchFormContents={(
+      <SearchForm onSubmit={search} defaultValue={defaultKeyword} />
+    )}
+    videosListContents={<VideosList videos={videos} loading={loading} /> }
+    onScrollEnd={searchNext}
+  />
+);
 
-const Title = styled.h1`
-  font-size: 30px;
-  font-weight: bold;
-  color: #ff3300;
-`;
-// ここまで追加する
+TopPagePresenter.propTypes = {
+  search: PropTypes.func.isRequired,
+  searchNext: PropTypes.func.isRequired,
+  defaultKeyword: PropTypes.string,
+  videos: VideosList.propTypes.videos,
+  loading: PropTypes.bool,
+};
 
-const TopPage = () => (
+TopPagePresenter.defaultProps = {
+  videos: null,
+  loading: false,
+  defaultKeyword: '',
+};
+
+TopPagePresenter.propTypes = {
+  search: PropTypes.func.isRequired,
+  searchNext: PropTypes.func.isRequired,
+}
   // ここから修正する
   <Root>
     <Title>This is Top page!</Title>
     <Link to="/play">Player Page</Link>
   </Root>
-  // ここまで修正する
-);
+
+;
 
 export default TopPage;

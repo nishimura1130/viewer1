@@ -17,3 +17,8 @@ export const fullWidth = () => sizes.map((s) => (
     <Button {...props} size={s} fullWidth>ボタン</Button>
   </div>
 ));
+
+// NAME: props 小道具
+// WHAT:親コンポーネントから子コンポーネントに値を渡すための仕組み。
+// WHY: propsを使うことで様々な場面で利用することができる。
+// HOW: 子コンポーネント: 親から値をもらいときにpropsを定義する。親コンポーネント: 子コンポーネントを呼び出したときに、子に渡したい値を設定する。

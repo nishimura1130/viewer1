@@ -60,6 +60,10 @@ const VideosListTemplate = ({
     };
   }, [onScrollEnd]);
   return (
+    //NAME: return
+    // WHAT: 関数の実行を終了して、関数の呼び出し元に返す値をしてする。関数の返り値。
+    // WHY: return文を呼び出すと関数の実行が止まるから。
+    // HOW: onScrollEndが返り値になる。無限にスクロールできるUI。
     <Root>
       <HeaderWrapper>
         {headerContents}

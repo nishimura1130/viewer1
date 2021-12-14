@@ -63,8 +63,11 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 
   // NAME: req.params
   // WHAT: URL内の指定された値を取得するために使用される。
-  // WHY: 
+  // WHY: ルートパラメータのみを取得する。リクエストされたパラメータを使用するにはreq.paramsを使用。
+  // HOW: router.getの第一引数により、ルートを文字列にで指定し、第二引数の関数でそのルートにアクセスされた時の処理を記述する。const { keyword } = req.params;が取得できるようになる。
   const { pageToken } = req.query;
+// NAME: pageToken
+//WHAT: 
   (async () => {
     // 検索結果を動画IDで取得
     const { data: { items: idItems, nextPageToken } } = await youtube.search.list({

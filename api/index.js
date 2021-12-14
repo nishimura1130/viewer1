@@ -17,7 +17,6 @@ const youtube = google.youtube({
 //WHY: 主にコスト削減やセキュリティー対策、最新情報の取得があげられる。
 // HOW: 外部apiキーを取得後、apiフォルダの中のindex.jsにapiキーを設定する。
 
-
 const router = express.Router();
 router.get('/videos/search/:keyword', (req, res, next) => {
 //NAME: reqについて
@@ -29,6 +28,9 @@ router.get('/videos/search/:keyword', (req, res, next) => {
   //WHAT: 指定されたパスに入ってきたリクエストに対するHTTPレスポンスを構成するためのオブジェクト。
   //WHY: レスポンスをクライアントに送信してリクエストとレスポンスサイクルを終了できるため。
   //HOW: ルートハンドラーが呼び出されていない場合、クライアントリクエストはフリーズ状態になってしまう。
+
+  //nextについて
+  //WHAT: 
 
 //NAME: ミドルウェア
   //WHAT: 共通のサービスと機能をアプリケーションに提供するソフトウェア。
@@ -57,10 +59,9 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 // WHY: 渡された側はその値に従って処理を行い、結果を返す。
 //HOW: 関数を使うとき。
 
-
-
   // NAME: req.params
-  // WHAT: 
+  // WHAT: URL内の指定された値を取得するために使用される。
+  // WHY: 
   const { pageToken } = req.query;
   (async () => {
     // 検索結果を動画IDで取得

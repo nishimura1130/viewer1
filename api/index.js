@@ -53,7 +53,9 @@ router.get('/videos/search/:keyword', (req, res, next) => {
   //HOW: 関数を定義するときに使用する。
 
 //NAME: 引数
-//WHAT: 
+//WHAT: 関数を呼び出すときに渡す値。
+// WHY: 渡された側はその値に従って処理を行い、結果を返す。
+//HOW: 関数を使うとき。
 
 
 

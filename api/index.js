@@ -12,6 +12,10 @@ const youtube = google.youtube({
   version: 'v3',
   auth: YOUTUBE_API_KEY,
 });
+// NAME: api
+// WHAT: なにかとなにかをつなぐもの。ソフトウェア同士をつなぐもの。ソフトウェアという外部のやりとりする窓口作り、外部アプリとコミュニケーションや連携ができる状態にすること。
+//WHY: 主にコスト削減やセキュリティー対策、最新情報の取得があげられる。
+// HOW: 外部apiキーを取得後、apiフォルダの中のindex.jsにapiキーを設定する。
 
 
 const router = express.Router();

@@ -47,6 +47,18 @@ router.get('/videos/search/:keyword', (req, res, next) => {
   // WHY: サーバー側でデータを保持している場合、get()で情報を取得してブラウザに表示する。
   // HOW: クライアントがリクエストして、サーバーの情報を持ってきて、ブラウザに表示させること。
   const { keyword } = req.params;
+  // NAME: params
+  // WHAT: 関数の定義の中で関数に渡す値として定義される値。
+  //WHY: 送られてきた値を受け取るためのメソッド。
+  //HOW: 関数を定義するときに使用する。
+
+//NAME: 引数
+//WHAT: 
+
+
+
+  // NAME: req.params
+  // WHAT: 
   const { pageToken } = req.query;
   (async () => {
     // 検索結果を動画IDで取得

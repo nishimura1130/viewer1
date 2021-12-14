@@ -36,16 +36,7 @@ TopPagePresenter.defaultProps = {
   defaultKeyword: '',
 };
 
-TopPagePresenter.propTypes = {
-  search: PropTypes.func.isRequired,
-  searchNext: PropTypes.func.isRequired,
-}
-  // ここから修正する
-  <Root>
-    <Title>This is Top page!</Title>
-    <Link to="/play">Player Page</Link>
-  </Root>
+export default TopPagePresenter;
 
-;
-
-export default TopPage;
+// NAME: Presenter
+// WHAT: 

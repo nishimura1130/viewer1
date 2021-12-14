@@ -10,6 +10,7 @@ const server = app.listen(3000, () => {
 });
 
 // app.use('/api', require('./api')); // 追加
+app.use('/api', require('./api')); // 追加
 
 // 静的ファイルのルーティング
 router.use(express.static('public'));

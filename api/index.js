@@ -19,8 +19,11 @@ const youtube = google.youtube({
 
 
 const router = express.Router();
-
 router.get('/videos/search/:keyword', (req, res, next) => {
+  //NAME: get
+  // WHAT: サーバーとの通信を行い、任意のデータを取得することができる。ブラウザからはPOSTメソッドがよく使われる。HTTP通信でブラウザにファイルにリクエストさせる。
+  // WHY: サーバー側でデータを保持している場合、get()で情報を取得してブラウザに表示する。
+  // HOW: クライアントがリクエストして、サーバーの情報を持ってきて、ブラウザに表示させること。
   const { keyword } = req.params;
   const { pageToken } = req.query;
   (async () => {

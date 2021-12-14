@@ -20,6 +20,11 @@ const youtube = google.youtube({
 
 const router = express.Router();
 router.get('/videos/search/:keyword', (req, res, next) => {
+  //NAME: reqについて
+  // WHAT: req=router.getの第一引数で指定されたパスに入ってきたHTTPリクエストを表すオブジェクト。
+  //WHY: router.getはGETメソッドでリクエスト受け付けます。
+  //HOW: 情報で取得したHTTPリクエストに関する様々な情報取得することができる。
+  
   //NAME: get
   // WHAT: サーバーとの通信を行い、任意のデータを取得することができる。ブラウザからはPOSTメソッドがよく使われる。HTTP通信でブラウザにファイルにリクエストさせる。
   // WHY: サーバー側でデータを保持している場合、get()で情報を取得してブラウザに表示する。

@@ -86,8 +86,10 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     // WHAT: 処理を一度バックグラウンドに移すこと。
     //WHY: 
 
-    //NAME: 関数の前に
-
+    //NAME: Promise
+    // WHAT: 後で値を返すという約束。
+    // WHY:  連続した非同期処理をフラットに書ける。
+    // HOW: new(resolve)と書くことで完了したという状態の保持になる。
 
     // 検索結果を動画IDで取得
     const { data: { items: idItems, nextPageToken } } = await youtube.search.list({
@@ -97,6 +99,7 @@ router.get('/videos/search/:keyword', (req, res, next) => {
       maxResults: 20,
       pageToken,
     });
+
     // 動画の情報を取得
     const ids = idItems.map(({ id: { videoId } }) => videoId);
     const { data: { items } } = await youtube.videos.list({

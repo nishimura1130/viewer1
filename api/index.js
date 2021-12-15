@@ -67,8 +67,28 @@ router.get('/videos/search/:keyword', (req, res, next) => {
   // HOW: router.getの第一引数により、ルートを文字列にで指定し、第二引数の関数でそのルートにアクセスされた時の処理を記述する。const { keyword } = req.params;が取得できるようになる。
   const { pageToken } = req.query;
 // NAME: pageToken
-//WHAT: 
+//WHAT: ここからデータ取得するというパラメータ( 関数の定義の中で関数に渡す値として定義される値)。defaultはnullで設定されている。
+//WHY: データの位置情報を教えてくれるため。
+//HOW: 空のデータを代入して設定する。
+
+// NAME: query;
+// WHAT: データベース管理システムにに対する問い合わせ。処理要求。
+// WHY: データの抽出や更新などの処理要求を文字列で表す。
+// HOW: リレーショナルデータベースではSQL使って記述する。
+
+// NAME: リレーショナルデータベース(Oracle Database, MySql, SQLServer, PostgreSQL)
+// WHAT: SQLを使い、登録、検索、更新、削除ができるようになる。`
+// WHY: ユーザーの情報がリレーショナルデータベースに格納されている。(メッセージ、フォロワー、フォロー、プロフィール)を使用するため。
+//HOW: 表形式で使い管理する。
+
   (async () => {
+    // NAME: async(非同期関数)宣言名
+    // WHAT: 処理を一度バックグラウンドに移すこと。
+    //WHY: 
+
+    //NAME: 関数の前に
+
+
     // 検索結果を動画IDで取得
     const { data: { items: idItems, nextPageToken } } = await youtube.search.list({
       part: 'id',

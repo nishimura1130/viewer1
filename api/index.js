@@ -116,3 +116,8 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 });
 
 module.exports = router;
+
+//NAME: npm i axios
+//WHAT: axiosというパッケージ
+//WHY: フロントからexpressサーバーへのAjax通信のためにaxiosというパッケージをダウンロードする。
+//HOW// フロントエンドからリクエストを受け取り、バックエンドにつなぐための役割?

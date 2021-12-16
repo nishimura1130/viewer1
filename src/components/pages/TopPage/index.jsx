@@ -91,13 +91,16 @@ const TopPageContainer = ({
 
   // NAME: useEffect
   // WHAT: APIやデータベースから非同期通信でデータを取得(fetch)する。
+  // WHY: 特定の値が変わったらデータをrefetch（再取得する）
+  //HOW: keywordという値が変わったらuseEffectの中の処理が再実行される。?
+  
   // keywordが変更されたらビデオ取得する
 
   //NAME: fetch
   //WHAT: データを取りに行って持ち帰ってくる。
   //WHY: ネットワークの通信上でデータを取って持ち帰ってくる。
   // HOW: fetch APIは非同期通信で外部APIにアクセスできる。
-  
+
   useEffect(() => {
     setNextPageToken(undefined);
     setVideos([]);

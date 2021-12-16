@@ -50,7 +50,9 @@ router.get('/videos/search/:keyword', (req, res, next) => {
   // WHAT: サーバーとの通信を行い、任意のデータを取得することができる。ブラウザからはPOSTメソッドがよく使われる。HTTP通信でブラウザにファイルにリクエストさせる。
   // WHY: サーバー側でデータを保持している場合、get()で情報を取得してブラウザに表示する。
   // HOW: クライアントがリクエストして、サーバーの情報を持ってきて、ブラウザに表示させること。
+
   const { keyword } = req.params;
+
   // NAME: params
   // WHAT: 関数の定義の中で関数に渡す値として定義される値。
   //WHY: 送られてきた値を受け取るためのメソッド。
@@ -109,7 +111,9 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     });
     res.json({ items, nextPageToken });
     // NAME: res.json
-    //WHY: jsonレスポンスを送信する。
+    //WHY: Expressでjsonを返すにはres.jsonを使用する。
+    //WHAT: 
+
 
   })().catch(next);
 

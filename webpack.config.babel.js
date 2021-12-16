@@ -1,4 +1,5 @@
 import path from 'path';
+import { IgnorePlugin } from 'webpack';
 
 export default (env, args) => {
   const isProduction = args.mode === 'production';
@@ -25,7 +26,14 @@ export default (env, args) => {
       },
       extensions: ['.js', '.jsx'],
     },
-
+    plugins: [
+      // Ignore all locale files of moment.js
+      new IgnorePlugin(/^\.\/locale$/, /moment$/),
+    ],
+// NAME: plugins
+//WHAT: アプリケーションの機能を拡張するソフトウェア。
+//WHY: 個別に追加してバージョンアップが可能で不要になればアプリケーションに影響を与えることなく削除できる。
+// HOW: プラグインをWebブラウザに追加すろと、動画や音声をWebブラウザで再生したり、PDFファイルを表示できたりできる。
 
   };
 };

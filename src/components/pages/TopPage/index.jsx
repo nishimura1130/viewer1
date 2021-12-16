@@ -57,7 +57,7 @@ const TopPageContainer = ({
    * @param pageToken 続きを取得する場合は前回取得時のレスポンスに含まれるnextPageTokenを指定する
    * @returns {Promise<void>}
    */
-  const getVidúeos = async (pageToken) => {
+  const getVideos = async (pageToken) => {
     setLoading(true);　
     const {
       data: {
@@ -93,14 +93,16 @@ const TopPageContainer = ({
   // WHAT: APIやデータベースから非同期通信でデータを取得(fetch)する。
   // WHY: 特定の値が変わったらデータをrefetch（再取得する）
   //HOW: keywordという値が変わったらuseEffectの中の処理が再実行される。?
-  
-  // keywordが変更されたらビデオ取得する
+
 
   //NAME: fetch
   //WHAT: データを取りに行って持ち帰ってくる。
   //WHY: ネットワークの通信上でデータを取って持ち帰ってくる。
   // HOW: fetch APIは非同期通信で外部APIにアクセスできる。
 
+
+  
+  // keywordが変更されたらビデオ取得する
   useEffect(() => {
     setNextPageToken(undefined);
     setVideos([]);
@@ -141,6 +143,8 @@ TopPageContainer.defaultProps = {
   },
   defaultKeyword: '遠藤さくら',
 };
+
+
 
 export default (props) => (
   <TopPageContainer

@@ -83,7 +83,7 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 
   (async () => {
     // NAME: async/await(非同期関数)宣言名
-    // WHAT: 処理を一度バックグラウンドに移すこと。
+    // WHAT: 処理を一度バックグラウンドに移すこと""。""
     // WHY:  関数の呼び出しの前にawaitをつけるとdataの値の結果が返ってくるまで待ってくれるため。
     // HOW: 関数の前にasyncをつけることで、非同期関数の宣言になる。
 

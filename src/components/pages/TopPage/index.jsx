@@ -88,9 +88,16 @@ const TopPageContainer = ({
   // WHAT: 現在のpropsとstateを元に、Reactがコンポーネントに対して、それらがどのように見えるべきなのか尋ねるプロセス。
   // WHY: 
   // HOW:
+
   // NAME: useEffect
-  // WHAT: 
+  // WHAT: APIやデータベースから非同期通信でデータを取得(fetch)する。
   // keywordが変更されたらビデオ取得する
+
+  //NAME: fetch
+  //WHAT: データを取りに行って持ち帰ってくる。
+  //WHY: ネットワークの通信上でデータを取って持ち帰ってくる。
+  // HOW: fetch APIは非同期通信で外部APIにアクセスできる。
+  
   useEffect(() => {
     setNextPageToken(undefined);
     setVideos([]);

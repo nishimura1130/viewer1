@@ -25,7 +25,8 @@ const props = {
   //WHAT: 動画のアップロード日時。
   // WHY: （YYYY-MM-DDThh:mm:ss.sZ)形式で指定するため。
   // HOW:  ブラウザに動画のアップロードの日時を表示させるため。YOUTUBEのAPIの仕様。
-  
+
   viewCount: '10100',
 }
 export const videoInfo = () => <VideoInfo {...props} />;
+

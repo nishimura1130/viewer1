@@ -45,8 +45,7 @@ router.get('/videos/search/:keyword', (req, res, next) => {
   //ルートハンドラーについて
     //WHAT: 指定したURLアドレスをリクエストするとコールバックされる。
     //WHY: routing.getの第一パラメータの/videos/search/:keywordはこのURL部分はreq変数へ変換される?
-    // WHY: 
-    // 引数とパラメータとで違うところがある。？？？
+    // 第二引数に無名関数(コールバック)を配置して、resオブジェクトを使ってデータを返却する
 
 
 //NAME: get

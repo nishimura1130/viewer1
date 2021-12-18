@@ -1,5 +1,7 @@
+require('dotenv');
 const express = require('express');
 const { google } = require('googleapis');
+
 
 // NAME: express
 //WHAT: node.jsのフレームワーク。
@@ -7,7 +9,7 @@ const { google } = require('googleapis');
 
 // HOW: expressをinstall後node_modules,package.json,package.lock.jsonがダウンロードされる。
 /* 先ほど取得したAPIキーを設定する */
-const YOUTUBE_API_KEY = 'AIzaSyAdFLOdZKkPD-G2996SXwkeVqfb3OUDNxk';
+const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 const youtube = google.youtube({
   version: 'v3',

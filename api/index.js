@@ -3,7 +3,8 @@ const { google } = require('googleapis');
 
 // NAME: express
 //WHAT: node.jsのフレームワーク。
-// WHY: 開発のスピードを上げる。
+// WHY: railsと同じ。expressを使うとroutingからrequestをもらい、responseを返すまでの一通りのメソッドを用意してくれるから。
+
 // HOW: expressをinstall後node_modules,package.json,package.lock.jsonがダウンロードされる。
 /* 先ほど取得したAPIキーを設定する */
 const YOUTUBE_API_KEY = 'AIzaSyAdFLOdZKkPD-G2996SXwkeVqfb3OUDNxk';
@@ -95,7 +96,8 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     // HOW: new(resolve)と書くことで完了したという状態の保持になる。
 
     // 検索結果を動画IDで取得
-    const { data: { items: idItems, nextPageToken } } = await youtube.search.list({
+    const { datFxa: { items: idItems, nextPageToken } } = await youtube.search.list({
+      // part, q, type, maxResultsがyoutubeAPIの仕様になる。
       part: 'id',
       q: keyword,
       type: 'video',
@@ -125,3 +127,13 @@ module.exports = router;
 //WHAT: axiosというパッケージ
 //WHY: フロントからexpressサーバーへのAjax通信のためにaxiosというパッケージをダウンロードする。
 //HOW// フロントエンドからリクエストを受け取り、バックエンドにつなぐための役割?
+
+
+// ハンドラーはrailsのいうcontrollerになる。router,handler,レスポンス。reactはルーターとコントローラーしかない。
+
+// 変数を渡すときはquery。querystring。ルーターのリクエストに中に全部入っている。
+
+// 変数を調べていた。
+
+
+// メソッドの引数の書き方。

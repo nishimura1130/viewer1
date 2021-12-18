@@ -39,3 +39,8 @@
 
 // state = 州
 // Reactコンポーネントが再描画されるきかっけはstateが変更されるとき、propsが変更さえた時。
+
+// react:rubyタグ的な。propsは変数を共有できる。
+
+// hooks:stateは中だけで使うもの。state useはreact内部でしか使えない。
+//useState 

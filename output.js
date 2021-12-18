@@ -380,10 +380,8 @@ var _jsxFileName = "/Users/nishiharasusumuakira/workspace/viewer1/src/entries/sa
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var rootEl = document.getElementById('root'); // NAME: について
-// WHAT:  全てのリクエストを受けて、public/index.htmlを返して、ブラウザに表示させてreactを画面に出す処理
-// WHY:  ウェブアプリはサーバーがリクエスト、レスポンスするようにできているため、そのリクエストを受け取るroutingのために
-// HOW:   インスタンス化したapp, routerのgetメソッドを読んで引数にパス名、コールバックを描く。
+var rootEl = document.getElementById('root');
+
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement("h1", {
   __self: void 0,

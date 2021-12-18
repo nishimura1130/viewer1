@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+//NAME useState 
+//WHAT: 関数コンポーネントでstateを管理するためのReact hooksである。（主に保持と更新の役割を行う）
+// WHY: 記述量が少ないから。
+// HOW: 関数の返却値は配列の形で一つ目にState変数、二つ目にそのStateを更新するための関数が設定する。
+import PropTypes from 'prop-types'; 
 import styled from 'styled-components';
 
 const Root = styled.input`
@@ -55,6 +59,7 @@ export const InputContainer = ({
   presenter,
 }) => {
   const [value, setValue] = useState(defaultValue);
+  // value=現在の状態    setValue=更新関数  defaultValue=初期値
   return presenter({
     className,
     onChange: (e) => {
@@ -95,3 +100,5 @@ export default (props) => (
     {...props}
   />
 );
+
+

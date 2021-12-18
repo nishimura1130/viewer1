@@ -21,3 +21,26 @@
 // npm run build
 
 // functional Comment
+
+// NAME: module・・・部品（組み合わせて使用する）
+// 進捗と相談することにする。
+
+
+
+//コンポネーントの使い方
+// import 輸入
+// export 輸出
+// react-domライブラリからReact-domという名前でモジュールをimportする。
+// import React from "react";
+// React では、コンポーネントをクラスまたは関数として定義できます。
+// クラスとして定義されたコンポーネントは現在このページで詳細に説明されているより多くの機能を提供します。
+// React コンポーネントクラスを定義するには、React.Component を継承する必要があります。
+
+
+// state = 州
+// Reactコンポーネントが再描画されるきかっけはstateが変更されるとき、propsが変更さえた時。
+
+// react:rubyタグ的な。propsは変数を共有できる。
+
+// hooks:stateは中だけで使うもの。state useはreact内部でしか使えない。
+//useState 

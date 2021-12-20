@@ -1,6 +1,7 @@
 require('dotenv');
 const express = require('express');
 const { google } = require('googleapis');
+const { async } = require('regenerator-runtime');
 
 
 // NAME: express
@@ -10,6 +11,7 @@ const { google } = require('googleapis');
 // HOW: expressをinstall後node_modules,package.json,package.lock.jsonがダウンロードされる。
 /* 先ほど取得したAPIキーを設定する */
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+
 
 const youtube = google.youtube({
   version: 'v3',
@@ -97,30 +99,47 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     // HOW: new(resolve)と書くことで完了したという状態の保持になる。
 
     // 検索結果を動画IDで取得
-    const { datFxa: { items: idItems, nextPageToken } } = await youtube.search.list({
-      // part, q, type, maxResultsがyoutubeAPIの仕様になる。
+    const { data: { items: idItems, nextPageToken } } = await youtube.search.list({
       part: 'id',
       q: keyword,
       type: 'video',
       maxResults: 20,
       pageToken,
     });
-
-    // 動画の情報を取得
     const ids = idItems.map(({ id: { videoId } }) => videoId);
     const { data: { items } } = await youtube.videos.list({
       part: 'statistics,snippet',
       id: ids.join(','),
     });
     res.json({ items, nextPageToken });
-    // NAME: res.json
-    //WHY: Expressでjsonを返すにはres.jsonを使用する。
-    //WHAT: 
-
-
   })().catch(next);
-
 });
+
+
+
+
+router.get('/videos/:videoId/related', (req, res, next) => {
+  const { videoId: relatedToVideoId } = req.params;
+  const { pageToken } = req.query;
+  (async () => {
+    // 関連動画のIDを取得
+    const { data: { items: idItems, nextPageToken } } = await youtube.search.list({
+      part: 'id',
+      relatedToVideoId,
+      type: 'video',
+      maxResults: 20,
+      pageToken,
+    });
+
+      // 動画の情報を取得
+      const ids = idItems.map(({ id: { videoId } }) => videoId);
+      const { data: { items } } = await youtube.videos.list({
+        part: 'statistics,snippet',
+        id: ids.join(','),
+      });
+      res.json({ items, nextPageToken });
+    })().catch(next);
+  });
 
 module.exports = router;
 
@@ -138,3 +157,9 @@ module.exports = router;
 
 
 // メソッドの引数の書き方。
+
+
+
+
+
+

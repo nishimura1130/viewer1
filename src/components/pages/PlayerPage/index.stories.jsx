@@ -1,5 +1,6 @@
 import React from 'react';
 import { actions } from '@storybook/addon-actions';
+
 import { PlayerPagePresenter as PlayerPage } from '.';
 import sampleData from './sampleData.json';
 

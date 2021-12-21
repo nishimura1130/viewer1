@@ -14,6 +14,13 @@ module.exports.readFavoriteIds = () => new Promise((resolve, reject) => {
     resolve(data ? JSON.parse(data) : []);
   });
 });
+//NAME: JSON.parse
+//WHAT: parseメソッドは文字列をJSONとして解析し文字列によって記述されているJavaScriptのオブジェクトや値を構築する。
+//WHY: 文字列やJSONを変換するために使用するため。
+// HOW: JSON.parse();とすることで変換したい値を入れる。
+
+
+
 // NAME: require
 // WHAT: モジュールやファイルをインポートする関数。
 // WHY: requireをプログラムの最初に記述することで指定したモジュールやファイルをNode.jsで扱えるようになるため。

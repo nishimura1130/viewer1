@@ -17,6 +17,13 @@ module.exports.readFavoriteIds = () => new Promise((resolve, reject) => {
 // WHAT: モジュールやファイルをインポートする関数。
 // WHY: requireをプログラムの最初に記述することで指定したモジュールやファイルをNode.jsで扱えるようになるため。
 //HOW: requireはエクスポートされたモジュールを戻り値として、返すので、変数に代入してその変数を使うことでモジュールを扱えるようになる。
+
+//NAME: 返り値
+//WHAT: 関数などの処理でかえされる値。
+//WHY: returnを使うことである関数で算出された値を別の関数の計算に使うことができる。
+//HOW: 複数の値をreturnで返すことができることやreturnを配列で使うことができる。
+
+
 //NAME: module
 //WHAT: 
 

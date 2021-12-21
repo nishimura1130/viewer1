@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { weekdaysShort } = require('moment');
 
 //からのファイルの読み込み
 const FAVORITE_IDS_FILE = './favoriteIds.json';
@@ -25,7 +26,10 @@ module.exports.readFavoriteIds = () => new Promise((resolve, reject) => {
 
 
 //NAME: module
-//WHAT: 
+//WHAT: 単なる一つのファイル。
+//WHY: exportとimportを使用することでmodule内のファイルを使用することがでモジュール間の相互の機能のやりとりができる。
+//HOW: npmを使ってexpressをインストールしたとしたら、jsファイルにimportしてmoduleを使うことができる。
+
 
 // お気に入りリストへの書き込み
 module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject) => {

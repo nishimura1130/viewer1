@@ -1,7 +1,5 @@
 const fs = require('fs');
-const { weekdaysShort } = require('moment');
 
-//からのファイルの読み込み
 const FAVORITE_IDS_FILE = './favoriteIds.json';
 
 // お気に入りリストの読み込み
@@ -12,6 +10,17 @@ module.exports.readFavoriteIds = () => new Promise((resolve, reject) => {
       return;
     }
     resolve(data ? JSON.parse(data) : []);
+  });
+});
+
+// お気に入りリストへの書き込み
+module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject) => {
+  fs.writeFile(FAVORITE_IDS_FILE, JSON.stringify(favoriteIds), (err) => {
+    if (err) {
+      reject(err);
+      return;
+    }
+    resolve();
   });
 });
 //NAME: JSON.parse
@@ -37,14 +46,7 @@ module.exports.readFavoriteIds = () => new Promise((resolve, reject) => {
 //WHY: exportとimportを使用することでmodule内のファイルを使用することがでモジュール間の相互の機能のやりとりができる。
 //HOW: npmを使ってexpressをインストールしたとしたら、jsファイルにimportしてmoduleを使うことができる。
 
-
-// お気に入りリストへの書き込み
-module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject) => {
-  fs.writeFile(FAVORITE_IDS_FILE, JSON.stringify(favoriteIds), (err) => {
-    if (err) {
-      reject(err);
-      return;
-    }
-    resolve();
-  });
-});
+// NAME: context
+//WHAT: propsとは別の方法でコンポーネントに動的に値を渡す機能のこと。
+// WHY: 複数のコンポーネントにまたがる状態を管理するため.。
+// HOW: propsをバケツリレーして子コンポーネントに渡すようにする。

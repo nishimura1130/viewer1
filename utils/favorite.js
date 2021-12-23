@@ -1,4 +1,5 @@
 const fs = require('fs');
+const { Z_ASCII } = require('zlib');
 
 const FAVORITE_IDS_FILE = './favoriteIds.json';
 
@@ -50,3 +51,8 @@ module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject)
 //WHAT: propsとは別の方法でコンポーネントに動的に値を渡す機能のこと。
 // WHY: 複数のコンポーネントにまたがる状態を管理するため.。
 // HOW: propsをバケツリレーして子コンポーネントに渡すようにする。
+
+// NAME: リデューサー
+// WHAT: 複数階層にまたがってデータ更新を行うのに使用する。
+// WHY: 現在のstateとActionから、新しいstateを生成する。
+// HOW: ??

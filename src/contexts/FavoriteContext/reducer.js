@@ -1,3 +1,5 @@
+import { weekdaysShort } from "moment";
+
 export default (state, action) => {
   switch (action.type) {
     //NAME: switch
@@ -10,6 +12,10 @@ export default (state, action) => {
     // WHY: ===演算子を使用しなければならない。
     // HOW: switchの後に()記述した式を評価し、その後がcaseの後に書かれたいずれか値と一致させるかどうか調べる。
 
+    //NAME: state
+    //WHAT: ユーザーの動きに合わせて変わる値のことをstateという。そのコンポーネントが持っている状態のこと。
+    //WHY: stateはコンポーネント自体によって保持され、コンポーネントかコンポーネントには渡されないため。
+    // HOW: stateの値はthis.更新関数()をコンポーネントに呼び出すことによって、更新される。その後()のrenderメソッドが呼ばれる。
 
     case 'init': {
       // お気に入りリストの初期化
@@ -48,3 +54,4 @@ export default (state, action) => {
       throw new Error(`${action.type} is not defined.`);
   }
 };
+

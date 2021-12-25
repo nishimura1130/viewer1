@@ -41,6 +41,11 @@ const FavoriteButtonContainer = ({
 }) => {
   const { state: { ids: favoriteIds }, dispatch } = useContext(FavoriteContext);
   if (!favoriteIds) {
+    //NAME: dispatch
+    //WHAT: stateの値を変更するときに使用する。
+    //WHY: actionの前にdispatchで受け取る処理を入れないとstoreに情報が届かないため。
+    //HOW: dispatchというメソッドを用意し、引数でアクションを受けとるようにする。
+
     // お気に入りリストが未設定(取得前)であればお気に入りボタンは表示しない
     return null;
     // NAME: useContext:

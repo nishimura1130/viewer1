@@ -28,7 +28,7 @@ const mockApi = {
 
 // NAME: モックapi
 // WHAT: URLにアクセスしてデータを返すこと。レスポンスを簡単に設計できる。施策のような模型。
-// WHY: storybookでもAPIのデータを取得する。
+// WHY: storybookでもAPIのデータを取得、更新を行えるようにするため。
 // HOW: 非同期通信でapiの情報をgetメソッドで取得し、取得したはreturn[]で返している。
 
 addDecorator((storyFn) => (

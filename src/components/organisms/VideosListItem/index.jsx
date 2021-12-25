@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import styled from 'styled-components';
+
+// 以下の1行を修正する
+import styled, { css } from 'styled-components';　// { css } を追加する
 import { useHistory } from 'react-router-dom';
 import Image from '~/components/atoms/Image';
+
+// 以下の1行を追加する
 import FavoriteButton from '~/components/molecules/FavoriteButton';
 import Typography from '~/components/atoms/Typography';
+
 
 const Root = styled.div`
   cursor: pointer;
@@ -41,6 +45,9 @@ const Description = styled(Typography)`
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  ${({ requireMarginForButton }) => requireMarginForButton && (
+    css`margin-bottom: 16px`
+  )};
 `;
 
 const ViewCount = styled(Typography)`
@@ -111,6 +118,8 @@ const VideosListItemContainer = ({
       thumbnails: {
         medium: {
           url: thumbnailUrl,
+          //NAME: url: thumbnailUrl,
+          // WHAT: YOUTUBEのサムネイルを取得する。
         },
       },
     },
@@ -175,3 +184,4 @@ export default (props) => (
 // 以下のpropsを追加しました。
 // withFavoriteButton: お気に入りボタンを表示させるかどうか設定している。
 // videoId: お気に入りボタンに渡す動画IDを設定している。
+

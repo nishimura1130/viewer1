@@ -22,6 +22,11 @@ export const FavoriteProvider = ({ api, children }) => {
     });
   }, []);
 
+  // NAME: Actionオブジェクト
+  // WHAT: dispatchは元々関数であり、引数ではアクションオブジェクトを渡している。
+  // WHY: サーバーの内容を変更したい内容を伝えるため、アクションを作成する。
+  // HOW: 変数にactionの宣言を行い、内容を記述していく。
+
   return (
     // コンテキストプロバイダーとしてuseReducerのstateとdispatchをコンテキストに設定
     <FavoriteContext.Provider value={value}>

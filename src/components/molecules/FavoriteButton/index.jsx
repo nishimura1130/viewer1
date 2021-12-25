@@ -43,7 +43,7 @@ const FavoriteButtonContainer = ({
   if (!favoriteIds) {
     //NAME: dispatch
     //WHAT: stateの値を変更するときに使用する。
-    //WHY: actionの前にdispatchで受け取る処理を入れないとstoreに情報が届かないため。
+    //WHY: actionの前にdispatchで受け取る処理を入れないとサーバーに情報が届かないため。
     //HOW: dispatchというメソッドを用意し、引数でアクションを受けとるようにする。
 
     // お気に入りリストが未設定(取得前)であればお気に入りボタンは表示しない

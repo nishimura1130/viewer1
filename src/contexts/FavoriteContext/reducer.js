@@ -21,7 +21,6 @@ export default (state, action) => {
     // WHAT: 使い始める値に初期値をを設定する行為を指して変数の初期化という。
     // WHY: 変数の初期値はゴミデータになってしまうためそのまま使用するとバグの原因になってしまうため。
     //HOW: 変数を宣言し、その値に代入すること。
-    
 
     case 'init': {
       // お気に入りリストの初期化
@@ -60,4 +59,3 @@ export default (state, action) => {
       throw new Error(`${action.type} is not defined.`);
   }
 };
-

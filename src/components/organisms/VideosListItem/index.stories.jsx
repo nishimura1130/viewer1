@@ -5,5 +5,13 @@ import video from './sampleData.json';
 export default { title: 'organisms/VideosListItem' };
 
 export const videoListItem = () => <VideosListItem video={video} />;
+export const videoListItemWithFavoriteButton = () => (
+  <VideosListItem video={video} withFavoriteButton />
+);
+
+export const videoListItem = () => <videoListItem video={video} />;
+export const videoListItemWithFavoriteButton = () => (
+  <VideosListItem video={video} withFavoriteButton />
+);
 
 

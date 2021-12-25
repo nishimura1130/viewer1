@@ -19,6 +19,7 @@ export const FavoriteProvider = ({ api, children }) => {
   useEffect(() => {
     api.get().then(({ data }) => {
       dispatch({ type: 'init', ids: data });
+      //お気に入り追加はadd、削除はremoveというtypeのアクションを受け取るように実装。
     });
   }, []);
 

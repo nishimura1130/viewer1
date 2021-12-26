@@ -80,6 +80,10 @@ FavoritePageContainer.propTypes = {
   }),
   presenter: PropTypes.func.isRequired,
 };
+// NAME: isRequired
+//WHAT: プロパティ名。お気に入り機能を表示させるため。
+// WHY: 引数の入力チェックを行うことができる。
+// HOW: PropTypes.array.isRequiredと表記する。
 
 FavoritePageContainer.defaultProps = {
   api: {

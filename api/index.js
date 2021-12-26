@@ -9,7 +9,6 @@ const { readFavoriteIds, writeFavoriteIds } = require('../utils/favorite');
 // NAME: express
 //WHAT: node.jsのフレームワーク。
 // WHY: railsと同じ。expressを使うとroutingからrequestをもらい、responseを返すまでの一通りのメソッドを用意してくれるから。
-
 // HOW: expressをinstall後node_modules,package.json,package.lock.jsonがダウンロードされる。
 /* 先ほど取得したAPIキーを設定する */
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
@@ -103,7 +102,7 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     // HOW: new(resolve)と書くことで完了したという状態の保持になる。
 
      // 検索結果を動画IDで取得
-     const {
+    const {
       data: { items: idItems, nextPageToken },
     } = await youtube.search.list({
       part: "id",
@@ -230,9 +229,7 @@ router.route('/favorites/:id')
     })().catch(next);
   });
 
-
 module.exports = router;
-
 
 
 //NAME: npm i axios

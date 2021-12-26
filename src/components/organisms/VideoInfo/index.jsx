@@ -111,7 +111,7 @@ export default (props) => (
   />
 );
 
-// NAME: Typography
+// NAME: Typography_
 //WHAT: CSSのフレームワークを導入のこと。
 //WHY: デザインを当てる。
 //HOW: アイコン名の先頭を大文字にすればimportすべきファイルがあるため、使いたいところを呼び出せば使用が可能になる。

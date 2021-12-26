@@ -1,3 +1,4 @@
+// import { map } from "core-js/core/array";
 import { weekdaysShort } from "moment";
 
 export default (state, action) => {
@@ -54,8 +55,15 @@ export default (state, action) => {
       }
       ids.splice(index, 1);
       return { ...state, ids };
+      // スプレットについて
     }
     default:
       throw new Error(`${action.type} is not defined.`);
   }
 };
+
+// NAME: store
+// WHAT: アプリケーション全体で共有できるデータを保管する場所。storeの中に共有を行うデータstateの作成を行う。
+// WHY; 更新関数でstateへのアクセスを許可する。
+// HOW: createStore関数(更新関数)を使ってstoreの作成を行うようにする。
+

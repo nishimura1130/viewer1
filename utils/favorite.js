@@ -50,7 +50,7 @@ module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject)
 // NAME: context
 //WHAT: propsとは別の方法でコンポーネントに動的に値を渡す機能のこと。
 // WHY: 複数のコンポーネントにまたがる状態を管理するため.。
-// HOW: propsをバケツリレーして子コンポーネントに渡すようにする。
+//HOW: バケツリレーを防ぐためのcontextだから、useContextを使うため。
 
 // NAME: リデューサー
 // WHAT: 複数階層にまたがってデータ更新を行うのに使用する。

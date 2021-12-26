@@ -5,7 +5,7 @@ export default (state, action) => {
   switch (action.type) {
     //NAME: switch
     //WHAT: switchコンポーネントの動作は複数の条件分岐に利用する。
-    // WHY: Routeに一致するものはすべてレンダリングされる。
+    //WHY: switchは変数の条件分岐に特化しているから、if文を書くよりも簡単なときはswitchを書く。
     // HOW: レンダリングさせるものが一つの場合、URLに/:~ と記載することでエラーページを返すことができる。
 
     // NAME: switch構文
@@ -66,4 +66,7 @@ export default (state, action) => {
 // WHAT: アプリケーション全体で共有できるデータを保管する場所。storeの中に共有を行うデータstateの作成を行う。
 // WHY; 更新関数でstateへのアクセスを許可する。
 // HOW: createStore関数(更新関数)を使ってstoreの作成を行うようにする。
+// git commit -m "fix mock api comment"
+
+
 

@@ -51,5 +51,4 @@ VideosList.defaultProps = {
 };
 
 export default VideosList;
-
-// render 付与する。
+// render=付与する。

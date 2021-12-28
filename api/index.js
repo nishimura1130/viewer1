@@ -12,6 +12,9 @@ const { readFavoriteIds, writeFavoriteIds } = require('../utils/favorite');
 // HOW: expressをinstall後node_modules,package.json,package.lock.jsonがダウンロードされる。
 /* 先ほど取得したAPIキーを設定する */
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+// const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
+
+
 
 
 

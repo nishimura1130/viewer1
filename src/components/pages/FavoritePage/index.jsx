@@ -39,7 +39,9 @@ const FavoritePageContainer = ({
   api,
   presenter,
 }) => {
+  //以下を使ってお気に入り動画のID一覧を取得している。
   const { state: { ids, initialized } } = useContext(FavoriteContext);
+  //お気に入り動画は、useStateを使ってstateで管理します。また動画取得中かどうかをstateの変数、loadingを使っている。
   const [videos, setVideos] = useState();
   const [loading, setLoading] = useState(false);
 

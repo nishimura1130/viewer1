@@ -5,3 +5,8 @@ export default { title: 'molecules/FavoriteButton' };
 
 export const isNotFavorite = () => <FavoriteButton />;
 export const isFavorite = () => <FavoriteButton isFavorite />;
+
+
+
+
+

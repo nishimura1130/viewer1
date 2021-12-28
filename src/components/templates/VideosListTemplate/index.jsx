@@ -52,20 +52,20 @@ const VideosListTemplate = ({
     // WHY: return文を呼び出すと関数の実行が止まるから。
     // HOW: onScrollEndが返り値になる。無限にスクロールできるUI。
     <Root>
-      <HeaderWrapper>
-        {headerContents}
-      </HeaderWrapper>
-      <TitleWrapper>
-        { titleContents }
-      </TitleWrapper>
-      <SearchFormWrapper>
-        {searchFormContents}
-      </SearchFormWrapper>
-      <VideosListWrapper>
-        {videosListContents}
-      </VideosListWrapper>
-    </Root>
-  );
+    <HeaderWrapper>
+      {headerContents}
+    </HeaderWrapper>
+    <TitleWrapper>
+      {titleContents}
+    </TitleWrapper>
+    <SearchFormWrapper>
+      {searchFormContents}
+    </SearchFormWrapper>
+    <VideosListWrapper>
+      {videosListContents}
+    </VideosListWrapper>
+  </Root>
+);
 };
 
 VideosListTemplate.propTypes = {

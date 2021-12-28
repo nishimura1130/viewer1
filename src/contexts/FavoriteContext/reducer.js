@@ -1,4 +1,5 @@
 // import { map } from "core-js/core/array";
+import { hasOwnMetadata } from "core-js/fn/reflect";
 import { weekdaysShort } from "moment";
 
 export default (state, action) => {
@@ -54,6 +55,10 @@ export default (state, action) => {
         return state;
       }
       ids.splice(index, 1);
+      // NAME: ids.splice(index, 1); slice();メソッド
+      // WHAT: 既存の要素を取り除いたり、置き換えたり、新しい配列の要素を追加することで、配列の内容を変更する。
+      // WHY: 第二引数の1を忘れると中身が消えてしまうため。
+      // HOW: 要素が一つだけ取り除かれた場合は要素数1が返される。要素が取り除かれない場合は、空の配列が返される。
       return { ...state, ids };
       // スプレットについて
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { actions } from '@storybook/addon-actions';
+import { action } from '@storybook/addon-actions';
 import styled, { css } from 'styled-components';
 import Typography from '~/components/atoms/Typography';
 import VideosListTemplate from '.';
@@ -35,7 +35,7 @@ export const Default = () => (
     titleContents={<Typography>タイトル</Typography>}
     searchFormContents={<SearchForm>searchForm</SearchForm>}
     videosListContents={<VideosList>videosList</VideosList>}
-    {...actions('onScrollEnd')}
+    onScrollEnd={action('onScrollEnd')}
   />
 );
 

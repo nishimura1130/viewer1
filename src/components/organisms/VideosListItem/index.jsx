@@ -97,15 +97,15 @@ VideosListItemPresenter.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   viewCount: PropTypes.string.isRequired,
-  withFavoriteButton: PropTypes.bool, 
-  videoId: PropTypes.string, 
+  withFavoriteButton: PropTypes.bool, //追加する
+  videoId: PropTypes.string, //追加する
 };
 
 VideosListItemPresenter.defaultProps = {
   className: '',
   onClick: null,
-  withFavoriteButton: false, 
-  videoId: '', 
+  withFavoriteButton: false, //追加する
+  videoId: '', //追加する
 };
 
 const VideosListItemContainer = ({
@@ -127,7 +127,7 @@ const VideosListItemContainer = ({
       viewCount,
     },
   },
-  withFavoriteButton,
+  withFavoriteButton, 
   presenter,
 }) => {
   // ページ遷移をさせるため、useHistoryを使ってhistoryオブジェクトを取得
@@ -135,7 +135,6 @@ const VideosListItemContainer = ({
   return presenter({
     className,
     onClick: () => {
-      // クリックされたときにページ遷移する
       history.push(`/play/${id}`);
     },
     title,
@@ -144,8 +143,6 @@ const VideosListItemContainer = ({
     viewCount,
     withFavoriteButton, // 追加する
     videoId: id, // 追加する
-    withFavoriteButton,
-    videoId: id,
   });
 };
 
@@ -171,7 +168,7 @@ VideosListItemContainer.propTypes = {
 
 VideosListItemContainer.defaultProps = {
   className: '',
-  withFavoriteButton: false,
+  withFavoriteButton: false, // 追加する
 };
 
 export default (props) => (

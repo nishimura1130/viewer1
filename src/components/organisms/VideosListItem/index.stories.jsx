@@ -6,4 +6,9 @@ export default { title: 'organisms/VideosListItem' };
 
 export const videoListItem = () => <VideosListItem video={video} />;
 
+// 追加する
+export const videoListItemWithFavoriteButton = () => (
+  <VideosListItem video={video} withFavoriteButton />
+);
+
 

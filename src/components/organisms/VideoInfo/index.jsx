@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import styled from 'styled-components';
+import FavoriteButton from '~/components/molecules/FavoriteButton';
 import Typography from '~/components/atoms/Typography';
 import PaperButton from '~/components/atoms/PaperButton';
 
@@ -10,10 +11,19 @@ const Root = styled.div`
   padding: 10px;
   box-sizing: border-box;
 `;
+const TitleWrapper = styled.div`
+  display: flex;
+  align-items: flex-start;
+`;
+
 
 const Title = styled(Typography)`
   margin: 4px 0 10px;
 `;
+const StyledFavoriteButton = styled(FavoriteButton)`
+  flex-shrink: 0;
+`;
+
 
 const Description = styled(Typography)`
   margin-top: 10px;
@@ -27,6 +37,7 @@ const Description = styled(Typography)`
 `;
 
 export const VideoInfoPresenter = ({
+  videoId,
   title,
   description,
   publishedAt,
@@ -99,3 +110,8 @@ export default (props) => (
     {...props}
   />
 );
+
+// NAME: Typography
+//WHAT: CSSのフレームワークを導入のこと。
+//WHY: デザインを当てる。
+//HOW: アイコン名の先頭を大文字にすればimportすべきファイルがあるため、使いたいところを呼び出せば使用が可能になる。

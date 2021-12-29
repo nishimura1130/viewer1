@@ -44,3 +44,8 @@
 
 // hooks:stateは中だけで使うもの。state useはreact内部でしか使えない。
 //useState 
+
+
+//dotenvについて
+//package.jsonのdevDependenciesのdotenv"^8.2.0を追加。
+//apiファイルのindex.jsにrequire('dotenv').config();を追加する。

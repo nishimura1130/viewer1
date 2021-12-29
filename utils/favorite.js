@@ -55,4 +55,12 @@ module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject)
 // NAME: リデューサー
 // WHAT: 複数階層にまたがってデータ更新を行うのに使用する。
 // WHY: 現在のstateとActionから、新しいstateを生成する。
-// HOW: ??
+
+// HOW: reducer定義ファイルでactionごとにどのようにstoreを変更するか記述することで、親コンポーネントであるProviderの値をpropsのバケツリレー無しで書き換えができるのがメリット。
+
+// reducer定義ファイルでactionごとにどのようにstoreを変更するか記述することで、親コンポーネントであるProviderの値をpropsのバケツリレー無しで書き換えができるのがメリット
+
+
+//NAME: リデューサー
+//WHAT: useReducerを使って引数にアクションを渡す。
+// WHY: reducer定義ファイルでactionごとにどのようにstoreを変更するか記述することで、親コンポーネントであるProviderの値をpropsのバケツリレー無しで書き換えができるのがメリット

@@ -7,6 +7,7 @@
 // HOW:  
 
 const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
+const { weekdaysShort } = require("moment");
 
 //npm i express....node.jsで利用できるアプリケーションフレームワーク。railsと同じ。
 //atomicデザインのデータの受け渡しがわからない。
@@ -56,3 +57,13 @@ const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline")
 //子コンポーネントは親コンポーネントをimportできない。
 // atomsはmoleculesをimportできない。小さいもの（使われるものが使う側）が大きいもの(使う側)を使用することができない。
 // PagesやTemplateはatomsやmoleculesをimportできるがその逆はできない。
+
+// NAME: 関数component
+//WHAT: ReactはUIをコンポーネントという部品単位で構築する。
+// WHY:  JSXを返すプレーンなjavascriptの関数。
+// HOW: JSXを返す関数で、アロー関数で書かれる。
+
+//NAME: クラスコンポーネント
+//WHAT: React.componentを拡張するjavascriptのクラスです。
+// WHY:  レンダリングの対象のJSXは、renderメソッド内で返される。
+//HOW: JSXはrenderメソッド内で返される。render() {~で返される。}

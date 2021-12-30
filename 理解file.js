@@ -6,6 +6,8 @@
 // WHY:  ブラウザに表示させるため。
 // HOW:  
 
+const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
+
 //npm i express....node.jsで利用できるアプリケーションフレームワーク。railsと同じ。
 //atomicデザインのデータの受け渡しがわからない。
 
@@ -49,3 +51,8 @@
 //dotenvについて
 //package.jsonのdevDependenciesのdotenv"^8.2.0を追加。
 //apiファイルのindex.jsにrequire('dotenv').config();を追加する。
+
+
+//子コンポーネントは親コンポーネントをimportできない。
+// atomsはmoleculesをimportできない。小さいもの（使われるものが使う側）が大きいもの(使う側)を使用することができない。
+// PagesやTemplateはatomsやmoleculesをimportできるがその逆はできない。

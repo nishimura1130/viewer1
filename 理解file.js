@@ -67,3 +67,9 @@ const { weekdaysShort } = require("moment");
 //WHAT: React.componentを拡張するjavascriptのクラスです。
 // WHY:  レンダリングの対象のJSXは、renderメソッド内で返される。
 //HOW: JSXはrenderメソッド内で返される。render() {~で返される。}
+
+// NAME: atoms(原子)
+// WHAT: UIを構築する最小単位です。
+// WHY: 汎用的コンポーネント。
+// HOW: styled-componentを当てることで使用することができる。
+

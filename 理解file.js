@@ -88,3 +88,8 @@ const { weekdaysShort } = require("moment");
 // WHAT: ワイヤーフレームと同じで、ページに画像や実際のデータが反映される前の状態のこと。
 // WHY: 部分導入した範囲内のレイアウトを決める。ロジックをもたない。CSSファイルを持つ。
 // HOW: pagesコンポーネントからのみ呼ばれる。1ページに一回呼ばれる。
+
+// NAME: Pages
+// WHAT: Routeコンポーネント直下で呼ばれる。APIリクエスト/レスポンスのハンドリングを行う。
+// WHY: reduxやcontextに依存する値や関数を呼び出すため。
+// HOW: templateやorganismsを呼び出す。CSSファイルを持たない。

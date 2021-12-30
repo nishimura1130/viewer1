@@ -20,7 +20,7 @@ const Header = ({ className }) => (
   <Root className={className}>
     {/* 修正する。タイトルを左寄せにする */}
     <Typography size="title" color="red" align="left">
-      YouTube Viewer
+      Original Viewer
     </Typography>
     {/* 追加する */}
     <StyledNavigationLinks />
@@ -37,3 +37,7 @@ Header.defaultProps = {
 
 export default Header;
 
+// NAME: className
+//WHAT: HTMLのclassがclassNameになるだけ。
+//WHY: コンポーネントのstateやpropsを元にCSSクラスを割り当てる。
+// HOW: クラス名を文字列としてclassNameプロパティを与える。

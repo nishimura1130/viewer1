@@ -83,3 +83,8 @@ const { weekdaysShort } = require("moment");
 // WHAT: Atomsやorganismsが組み合わさって利用される。useContextによる接続が可能になる。
 // WHY: organismsやAtomsと違い、再利用はあまり求められない。
 // HOW: 他に依存するコンポーネントがなかったとしても、ドメインが入った時点でorganismsになる。
+
+// NAME: Template
+// WHAT: ワイヤーフレームと同じで、ページに画像や実際のデータが反映される前の状態のこと。
+// WHY: 部分導入した範囲内のレイアウトを決める。ロジックをもたない。CSSファイルを持つ。
+// HOW: pagesコンポーネントからのみ呼ばれる。1ページに一回呼ばれる。

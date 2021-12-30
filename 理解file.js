@@ -93,3 +93,7 @@ const { weekdaysShort } = require("moment");
 // WHAT: Routeコンポーネント直下で呼ばれる。APIリクエスト/レスポンスのハンドリングを行う。
 // WHY: reduxやcontextに依存する値や関数を呼び出すため。
 // HOW: templateやorganismsを呼び出す。CSSファイルを持たない。
+
+// NAME: ロジックをも持たない
+// WHAT: 状態や副作用を持たず、単に受け取ったpropsを元に子コンポーネントに割り振ったり、HTML,CSSに集中すること。
+// WHY: propsから何らかの計算する処理を入ったとしても、そのコンポーネント内にstateの副作用を持たなければ良い。

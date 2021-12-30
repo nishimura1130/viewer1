@@ -6,6 +6,7 @@
 // WHY:  ブラウザに表示させるため。
 // HOW:  
 
+const { hasOwnMetadata } = require("core-js/fn/reflect");
 const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
 const { weekdaysShort } = require("moment");
 
@@ -75,7 +76,10 @@ const { weekdaysShort } = require("moment");
 
 // NAME: molecules(分子)
 // WHAT: 具体的なインターフェイスになる。
-// WHY: UIに具体性が出てくる。
+// WHY: UIに具体性が出てくるから。
 // HOW: お気に入りボタンのクリックしてお気に入りすることなどが具体的に使用できる。
 
-//
+// NAME: organisms(有機体)
+// WHAT: Atomsやorganismsが組み合わさって利用される。useContextによる接続が可能になる。
+// WHY: organismsやAtomsと違い、再利用はあまり求められない。
+// HOW: 他に依存するコンポーネントがなかったとしても、ドメインが入った時点でorganismsになる。

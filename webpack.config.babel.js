@@ -42,4 +42,3 @@ export default (env, args) => {
   // WHAT:  productionモードでない場合はソースマップを出力する。
   // WHY:  jsファイル、jsxファイルはbabel-loaderを使って変換するため。
   // HOW:   /src/entries/sample.jsxを./output/sample.jsに出力する
-

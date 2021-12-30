@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // 以下の1行を修正する
-import styled, { css } from 'styled-components';　// { css } を追加する
+import styled, { css } from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import Image from '~/components/atoms/Image';
-
-// 以下の1行を追加する
 import FavoriteButton from '~/components/molecules/FavoriteButton';
 import Typography from '~/components/atoms/Typography';
 

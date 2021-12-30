@@ -1,6 +1,11 @@
-// import { map } from "core-js/core/array";
+import { map } from "core-js/core/array";
+// NAME: mapメソッド
+// WHAT: キーと値を保持するコレクション(後からサイズを変更できる動的配列)。
+// WHY: 値を追加するときにはキーを指定し、キーを使って値を検索したり、取り出すことができる。
+// HOW: Mapの値を取得するには、getメソッドを使用してMapのキーを指定し、キーに紐づいた値を取得する。
 import { hasOwnMetadata } from "core-js/fn/reflect";
 import { weekdaysShort } from "moment";
+
 
 export default (state, action) => {
   switch (action.type) {
@@ -72,6 +77,4 @@ export default (state, action) => {
 // WHY; 更新関数でstateへのアクセスを許可する。
 // HOW: createStore関数(更新関数)を使ってstoreの作成を行うようにする。
 // git commit -m "fix mock api comment"
-
-
 

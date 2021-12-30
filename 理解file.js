@@ -73,3 +73,9 @@ const { weekdaysShort } = require("moment");
 // WHY: 汎用的コンポーネント。
 // HOW: styled-componentを当てることで使用することができる。
 
+// NAME: molecules(分子)
+// WHAT: 具体的なインターフェイスになる。
+// WHY: UIに具体性が出てくる。
+// HOW: お気に入りボタンのクリックしてお気に入りすることなどが具体的に使用できる。
+
+//

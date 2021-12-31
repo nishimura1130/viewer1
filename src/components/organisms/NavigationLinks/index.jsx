@@ -41,6 +41,18 @@ export const NavigationLinksPresenter = ({ className, currentPath }) => (
 // WHAT: コンポーネントが複数の要素を返すときに使う。
 // WHY: DOMに余分のnodeを追加することなくこ要素をまとめることができる。
 // HOW: <React.Fragment> とすることでkeyを持つことができる。keyはFragmentに渡すことができる唯一の属性。
+// class Columns extends React.Component {
+//   render() {
+//     return (
+//       <>
+//         <td>Hello</td>
+//         <td>World</td>
+//       </>
+//     );
+//   }
+// }
+// 宮崎Teacher Comment = <></>で書くことが多いから、初めてこれがでてもFragmentの省略形だと認識すれば良いよ。
+
 NavigationLinksPresenter.propTypes = {
   className: PropTypes.string,
   currentPath: PropTypes.string,

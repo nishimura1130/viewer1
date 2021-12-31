@@ -125,7 +125,7 @@ const VideosListItemContainer = ({
       viewCount,
     },
   },
-  withFavoriteButton, 
+  withFavoriteButton,
   presenter,
 }) => {
   // ページ遷移をさせるため、useHistoryを使ってhistoryオブジェクトを取得

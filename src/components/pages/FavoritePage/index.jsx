@@ -75,16 +75,18 @@ const FavoritePageContainer = ({
 FavoritePageContainer.propTypes = {
   api: PropTypes.shape({
     //NAME:PropTypes.shape
-    //WHAT: 指定された形式を満たしているかをチェックする役割。
-    //WHY: この場合指定されているのはapiから渡されたお気に入りリスト情報の見極め機能。
+    //WHAT: ハッシュやオブジェクトの型定義ができるヘルパーメソッド。
+    //WHY: shapeを使わないとobjectの型チェックができないから。
     // HOW:React.PropTypes.shape({title: React.PropTypes.string});中の型を指定する。
+
+    // Teacher comment = Propsが指定された形式を満たしているかをチェックする役割。をするのがPropTypes自体の役割。
     getFavoriteList: PropTypes.func,
   }),
   presenter: PropTypes.func.isRequired,
 };
 // NAME: isRequired
-//WHAT: プロパティ名。お気に入り機能を表示させるため。
-// WHY: 引数の入力チェックを行うことができる。
+//WHAT: isRequiredがついてるpropsは必須となり、このPropsを渡していないとエラーになる。(railsでいうpresence: true)のイメージ。
+// WHY: 全てのPropTypes.型名の後は全てisRequiredプロパティが追加できる。引数の入力チェックを行うことができる。
 // HOW: PropTypes.array.isRequiredと表記する。
 
 FavoritePageContainer.defaultProps = {

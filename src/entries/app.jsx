@@ -17,6 +17,8 @@ ReactDOM.render(
     <FavoriteProvider> {/* 追加する */}
       <App />
     </FavoriteProvider>　{/* 追加する */}
+    {/* NAME: Provider
+    // WHAT:  */}
   </>,
   rootEl,
 );

@@ -30,6 +30,11 @@ const youtube = google.youtube({
 
 const router = express.Router();
 router.get('/videos/search/:keyword', (req, res, next) => {
+//NAME: router.get
+//WHAT: 特定のURLにアクセスした際に、どのファイルを実行するか指定する機能。getはページを読み込むイメージ。
+//WHY: "/"を入れるこでルーとパスを指定する。
+// HOW: expressを利用して、routerへインスタンス化使用する。
+
 //NAME: reqについて
   // WHAT: req=router.getの第一引数で指定されたパスに入ってきたHTTPリクエストを表すオブジェクト。
   //WHY: router.getはGETメソッドでリクエスト受け付けます。
@@ -83,7 +88,7 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 //WHY: データの位置情報を教えてくれるため。
 //HOW: 空のデータを代入して設定する。
 
-// NAME: query;
+// NAME: query
 // WHAT: データベース管理システムにに対する問い合わせ。処理要求。
 // WHY: データの抽出や更新などの処理要求を文字列で表す。
 // HOW: リレーショナルデータベースではSQL使って記述する。

@@ -97,3 +97,4 @@ const { weekdaysShort } = require("moment");
 // NAME: ロジックをも持たない
 // WHAT: 状態や副作用を持たず、単に受け取ったpropsを元に子コンポーネントに割り振ったり、HTML,CSSに集中すること。
 // WHY: propsから何らかの計算する処理を入ったとしても、そのコンポーネント内にstateの副作用を持たなければ良い。
+

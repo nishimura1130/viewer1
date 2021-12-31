@@ -80,9 +80,9 @@ const { weekdaysShort } = require("moment");
 // HOW: お気に入りボタンのクリックしてお気に入りすることなどが具体的に使用できる。
 
 // NAME: organisms(有機体)
-// WHAT: Atomsやorganismsが組み合わさって利用される。useContextによる接続が可能になる。
-// WHY: organismsやAtomsと違い、再利用はあまり求められない。
-// HOW: 他に依存するコンポーネントがなかったとしても、ドメインが入った時点でorganismsになる。
+// WHAT: Atomsやmoleculesが組み合わさって利用される。useContextによる接続が可能になる。
+// WHY: moleculesやAtomsと違い、再利用はあまり求められない。
+// HOW: リストやヘッダーやフッターなど要素を複数表示するもののときはこのフォルダに置く。
 
 // NAME: Template
 // WHAT: ワイヤーフレームと同じで、ページに画像や実際のデータが反映される前の状態のこと。

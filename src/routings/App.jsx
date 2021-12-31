@@ -29,6 +29,7 @@ const AppRouting = () => (
       WHY: アクセスしたときは住所を表紙するコンポーネントをレンダリングしたりといった操作が可能になる。
       HOW:  localhost:3000->localhost:3000/favoritesにすることでお気に入り機能のURLに行けることができる。
       */}
+  
       <Route path="*" component={NotFoundPage} />
     </Switch>
   </BrowserRouter>

@@ -10,13 +10,16 @@ const initialState = {
   favoriteIds: [],
 };
 
-
 // コンテキストプロバイダーコンポーネント
 export const FavoriteProvider = ({ api, children }) => {
   // useReducerでreducer関数と初期値をセット
   const [state, dispatch] = useReducer(reducer, { ids: [] });
   const value = { state, dispatch };
   useEffect(() => {
+    //お気に入り動画一覧ページではこのコンテクストの初期化処理、つまりお気に入り動画ID一覧の取得が終わるまではお気に入り動画取得を待つようにしています。
+    //お気に入り動画ID一覧が初期化されたら,useContextで取得しているidsが変更されるのでuseEffectに渡している処理が実行される。
+
+
     api.get().then(({ data }) => {
       dispatch({ type: 'init', ids: data });
       //お気に入り追加はadd、削除はremoveというtypeのアクションを受け取るように実装。

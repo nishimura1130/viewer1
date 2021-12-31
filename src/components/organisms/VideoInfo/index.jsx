@@ -16,7 +16,6 @@ const TitleWrapper = styled.div`
   align-items: flex-start;
 `;
 
-
 const Title = styled(Typography)`
   margin: 4px 0 10px;
 `;
@@ -46,7 +45,10 @@ export const VideoInfoPresenter = ({
   const [showAllDescription, setShowAllDescription] = useState(false);
   return (
     <Root>
-      <Title size="subtitle" bold>{title}</Title>
+      <TitleWrapper> {/* 追加する */}
+        <Title size="subtitle" bold>{title}</Title>
+        <StyledFavoriteButton videoId={videoId} /> {/* 追加する */}
+      </TitleWrapper> {/* 追加する */}
       <Typography size="xs" color="gray">
         {viewCount}
         回視聴・
@@ -65,6 +67,7 @@ export const VideoInfoPresenter = ({
 }
 
 VideoInfoPresenter.propTypes = {
+  videoId: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   viewCount: PropTypes.string.isRequired,
   publishedAt: PropTypes.string.isRequired,
@@ -73,6 +76,7 @@ VideoInfoPresenter.propTypes = {
 
 const VideoInfoContainer = ({
   item: {
+    id: videoId,
     snippet: {
       publishedAt,
       title,
@@ -84,6 +88,7 @@ const VideoInfoContainer = ({
   },
   presenter,
 }) => (presenter({
+  videoId,
   title,
   viewCount,
   publishedAt: moment(publishedAt).format('YYYY/MM/DD'),
@@ -92,6 +97,7 @@ const VideoInfoContainer = ({
 
 VideoInfoContainer.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.string,
     snippet: PropTypes.shape({
       publishedAt: PropTypes.string,
       title: PropTypes.string,
@@ -111,7 +117,3 @@ export default (props) => (
   />
 );
 
-// NAME: Typography
-//WHAT: CSSのフレームワークを導入のこと。
-//WHY: デザインを当てる。
-//HOW: アイコン名の先頭を大文字にすればimportすべきファイルがあるため、使いたいところを呼び出せば使用が可能になる。

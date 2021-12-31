@@ -1,6 +1,7 @@
 import React from 'react';
 import { VideoInfoPresenter as VideoInfo } from '.';
 
+
 export default { title: 'organisms/VideoInfo' };
 
 const props = {

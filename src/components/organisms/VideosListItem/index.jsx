@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 // 以下の1行を修正する
-import styled, { css } from 'styled-components';　// { css } を追加する
+import styled, { css } from 'styled-components';
 import { useHistory } from 'react-router-dom';
 import Image from '~/components/atoms/Image';
-
-// 以下の1行を追加する
 import FavoriteButton from '~/components/molecules/FavoriteButton';
 import Typography from '~/components/atoms/Typography';
 
@@ -97,15 +95,15 @@ VideosListItemPresenter.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   viewCount: PropTypes.string.isRequired,
-  withFavoriteButton: PropTypes.bool, 
-  videoId: PropTypes.string, 
+  withFavoriteButton: PropTypes.bool, //追加する
+  videoId: PropTypes.string, //追加する
 };
 
 VideosListItemPresenter.defaultProps = {
   className: '',
   onClick: null,
-  withFavoriteButton: false, 
-  videoId: '', 
+  withFavoriteButton: false, //追加する
+  videoId: '', //追加する
 };
 
 const VideosListItemContainer = ({
@@ -135,7 +133,6 @@ const VideosListItemContainer = ({
   return presenter({
     className,
     onClick: () => {
-      // クリックされたときにページ遷移する
       history.push(`/play/${id}`);
     },
     title,
@@ -144,8 +141,6 @@ const VideosListItemContainer = ({
     viewCount,
     withFavoriteButton, // 追加する
     videoId: id, // 追加する
-    withFavoriteButton,
-    videoId: id,
   });
 };
 
@@ -171,7 +166,7 @@ VideosListItemContainer.propTypes = {
 
 VideosListItemContainer.defaultProps = {
   className: '',
-  withFavoriteButton: false,
+  withFavoriteButton: false, // 追加する
 };
 
 export default (props) => (

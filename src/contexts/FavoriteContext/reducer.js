@@ -1,10 +1,15 @@
-import { weekdaysShort } from "moment";
+// import { map } from "core-js/core/array";
+// // NAME: mapメソッド
+// // WHAT: キーと値を保持するコレクション(後からサイズを変更できる動的配列)。
+// // WHY: 値を追加するときにはキーを指定し、キーを使って値を検索したり、取り出すことができる。
+// // HOW: Mapの値を取得するには、getメソッドを使用してMapのキーを指定し、キーに紐づいた値を取得する。
+
 
 export default (state, action) => {
   switch (action.type) {
     //NAME: switch
     //WHAT: switchコンポーネントの動作は複数の条件分岐に利用する。
-    // WHY: Routeに一致するものはすべてレンダリングされる。
+    //WHY: switchは変数の条件分岐に特化しているから、if文を書くよりも簡単なときはswitchを書く。
     // HOW: レンダリングさせるものが一つの場合、URLに/:~ と記載することでエラーページを返すことができる。
 
     // NAME: switch構文
@@ -53,9 +58,25 @@ export default (state, action) => {
         return state;
       }
       ids.splice(index, 1);
+      // NAME: ids.splice(index, 1); slice();メソッド
+      // WHAT: spliceは配列の要素を器用に切り抜きできるもの。
+      // WHY: 第二引数の1を忘れると中身が消えてしまうため。
+      // HOW: 取り除きたい要素のインデックス番号を入力することで、その要素を切り抜くことができる。切り抜きたい要素の指定方法は下記の通り。
+//       splice(start)
+//       splice(start, deleteCount)
+//       splice(start, deleteCount, item1)
+//       splice(start, deleteCount, item1, item2, itemN)
+//      メソッドは複数の使い方あるから
       return { ...state, ids };
+      // スプレットについて
     }
     default:
       throw new Error(`${action.type} is not defined.`);
   }
 };
+
+// NAME: store
+// WHAT: アプリケーション全体で共有できるデータを保管する場所。storeの中に共有を行うデータstateの作成を行う。
+// WHY; 更新関数でstateへのアクセスを許可する。
+// HOW: createStore関数(更新関数)を使ってstoreの作成を行うようにする。
+// git commit -m "fix mock api comment"

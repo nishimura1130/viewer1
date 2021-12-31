@@ -80,7 +80,7 @@ const { weekdaysShort } = require("moment");
 // HOW: お気に入りボタンのクリックしてお気に入りすることなどが具体的に使用できる。
 
 // NAME: organisms(有機体)
-// WHAT: Atomsやmoleculesが組み合わさって利用される。useContextによる接続が可能になる。
+// WHAT: AtomsやMoleculesが組み合わさって利用される。イメージとしてはmapなどを使って一覧を出すときなどのリストや、要素を陳列するHeader, Footerなどがここに当たる。
 // WHY: moleculesやAtomsと違い、再利用はあまり求められない。
 // HOW: リストやヘッダーやフッターなど要素を複数表示するもののときはこのフォルダに置く。
 

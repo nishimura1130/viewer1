@@ -59,9 +59,14 @@ export default (state, action) => {
       }
       ids.splice(index, 1);
       // NAME: ids.splice(index, 1); slice();メソッド
-      // WHAT: 既存の要素を取り除いたり、置き換えたり、新しい配列の要素を追加することで、配列の内容を変更する。
+      // WHAT: spliceは配列の要素を器用に切り抜きできるもの。
       // WHY: 第二引数の1を忘れると中身が消えてしまうため。
-      // HOW: 要素が一つだけ取り除かれた場合は要素数1が返される。要素が取り除かれない場合は、空の配列が返される。
+      // HOW: 取り除きたい要素のインデックス番号を入力することで、その要素を切り抜くことができる。切り抜きたい要素の指定方法は下記の通り。
+//       splice(start)
+//       splice(start, deleteCount)
+//       splice(start, deleteCount, item1)
+//       splice(start, deleteCount, item1, item2, itemN)
+//      メソッドは複数の使い方あるから
       return { ...state, ids };
       // スプレットについて
     }

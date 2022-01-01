@@ -1,6 +1,8 @@
 require('dotenv').config();
+const { query } = require('express');
 const express = require('express');
 const { google } = require('googleapis');
+const { weekdaysShort } = require('moment');
 // const { async } = require('regenerator-runtime');
 
 const { readFavoriteIds, writeFavoriteIds } = require('../utils/favorite');
@@ -104,6 +106,13 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 //HOW: 表形式で使い管理する。
 
   (async () => {
+    //NAME: 関数
+    // WHAT: まとまった処理が入っている箱のこと。
+    // WHY: 処理に名前をつけることで、その関数の実行命令がきたら実行する仕組みのこと。
+    // HOW: 変数宣言 変数名 { 処理の内容 } 処理の結果。
+
+    
+
     // NAME: async/await(非同期関数)宣言名
     // WHAT: 処理を一度バックグラウンドに移すこと""。""
     // WHY:  関数の呼び出しの前にawaitをつけるとdataの値の結果が返ってくるまで待ってくれるため。
@@ -259,3 +268,7 @@ module.exports = router;
 
 
 // メソッドの引数の書き方。
+
+// パラメーターとクエリの違い。
+// params/送られてきた値を受け取るためのメソッド。
+// query/データベース管理システムにに対する問い合わせ。

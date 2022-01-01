@@ -10,6 +10,11 @@ import useOnScrollEnd from '~/utils/useOnScrollEnd';
 //WHY: 関数コンポーネント内で副作用を実行するたものHookです。
 // HOW: 第二引数を指定しない場合は、副作用は前レンダリング後に実行されます。
 
+// NAME: Hook(関数)
+// WHAT: クラスを書かずに使えるようになる機能のこと。
+//WHY: クラスコンポーネントには状態管理やライフサイクルの機能はあるが関数コンポーネントにはそれらがないことが特徴。
+//HOW: useState,useEffect,useContextを使用する。クラスの内部では使用することができない。
+
 const Root = styled.div`
   width: 100%;
   height: 100%;

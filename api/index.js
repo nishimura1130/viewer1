@@ -147,6 +147,10 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     } = await youtube.videos.list({
       part: "statistics,snippet",
       id: ids.join(","),
+      //NAME: join
+      //WHAT: map関数を使用してすべてのIDを取得し、 joinメソッドを使用してそれらをコンマで結合するがでできる。
+      //WHY: 配列の全要素が連結された文字列。
+      // HOW: 区切り文字は（ , ）または指定された文字列になる。
     });
     res.json({ items, nextPageToken });
   })().catch(next);

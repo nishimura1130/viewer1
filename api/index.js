@@ -138,6 +138,10 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     });
     // 動画の情報を取得
     const ids = idItems.map(({ id: { videoId } }) => videoId);
+    //NAME: map
+    // WHAT: 配列を受け取って中身の値を二倍にする。
+    // WHY: map()関数が返す新しい配列を変数(idItems)に格納し、ログに出力する。
+    //HOW: 要素の集合を作成し、中括弧で囲むことでJSXに含むことができる。
     const {
       data: { items },
     } = await youtube.videos.list({

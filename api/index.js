@@ -154,6 +154,10 @@ router.get('/videos/search/:keyword', (req, res, next) => {
     });
     res.json({ items, nextPageToken });
   })().catch(next);
+  // NAME:: catch();
+  // WHAT: EXPRESSが同期、または非同期的に発生するエラーをキャッチして処理する方法。
+  // WHY: エラーの有無に関わらず、呼び出される。エラーが無ければ二番目のハンドラが呼び出されるため。
+  // HOW: nextはコールバックとして提供されているためエラーの有無に関わらず呼び出される。
 });
 
 // 追加する

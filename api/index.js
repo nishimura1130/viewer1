@@ -5,6 +5,11 @@ const { google } = require('googleapis');
 
 const { readFavoriteIds, writeFavoriteIds } = require('../utils/favorite');
 
+//NAME: const
+//WHAT: 定数を定義するキーワード。あたいに名前をつけ、コード中名前によって参照できるようにする。定数の目印。こいつは定数だよ！を表す目印。
+// WHY: 定数の値は再代入による定数の変更ができず、再宣言もできない。初期化子が(変数の初期値)必要。変数の値を変更しようとするとコンパイルエラーになる。
+//HOW: constを文頭つけて変数を宣言する。
+
 
 // NAME: express
 //WHAT: node.jsのフレームワーク。
@@ -254,9 +259,3 @@ module.exports = router;
 
 
 // メソッドの引数の書き方。
-
-
-
-
-
-

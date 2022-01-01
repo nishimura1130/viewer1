@@ -98,3 +98,11 @@ const { weekdaysShort } = require("moment");
 // WHAT: 状態や副作用を持たず、単に受け取ったpropsを元に子コンポーネントに割り振ったり、HTML,CSSに集中すること。
 // WHY: propsから何らかの計算する処理を入ったとしても、そのコンポーネント内にstateの副作用を持たなければ良い。
 
+// git push origin feature/review-4 -f
+// git rebase --continue  「rebase」は、他のベースチップの上で、コミットを再適用
+// git rebase master
+// git cherry-pick [gitのlogID]
+// git status
+
+//NAME: プロパティ
+//WHAT: 

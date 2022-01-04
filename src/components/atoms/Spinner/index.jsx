@@ -25,3 +25,6 @@ export default styled.span`
   border-right-color: transparent;
   animation: ${loopSpinKeyFrame} 1s linear infinite;
 `;
+
+// NAME: export default
+// WHAT: 

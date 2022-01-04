@@ -41,3 +41,5 @@ export default Header;
 //WHAT: HTMLのclassがclassNameになるだけ。
 //WHY: コンポーネントのstateやpropsを元にCSSクラスを割り当てる。
 // HOW: クラス名を文字列としてclassNameプロパティを与える。
+
+

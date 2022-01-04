@@ -136,12 +136,30 @@ router.get('/videos/search/:keyword', (req, res, next) => {
       maxResults: 20,
       pageToken,
     });
+
+    // const a = [1, 2, 3].map( (a) => a + 1   );
+    // const a = [{ id: { videoId: 1 } }, { id: { videoId: 2 } },, { id: { videoId: 3 } },].map( (a) => a + 1   );
+
+    // b = a[0] // { id: { videoId: 1 } }
+
+    // b.id
+    // const {
+    //   id //{ videoId: 1 }
+    // } = b:
+  
+
     // 動画の情報を取得
     const ids = idItems.map(({ id: { videoId } }) => videoId);
+    // NAME: forEach
+    // WHAT: 配列データに特化した繰り返し処理を簡単に実行できるメソッドになります。
+    //WHY: 配列の中身の値を取り出すときに使用される。
+    //HOW: 配列.forEach(処理)で配列データに対してforEachを実行する。
+
     //NAME: map
     // WHAT: 配列を受け取って中身の値を二倍にする。
+    //WHAT: イメージはforEachと一緒。ただfor文と違って、結果の配列を返り値として使えるから、左辺に代入式を書いたり、mapしたあとの結果を使いたいときはfor文を使わずにmapを使う
     // WHY: map()関数が返す新しい配列を変数(idItems)に格納し、ログに出力する。
-    //HOW: 要素の集合を作成し、中括弧で囲むことでJSXに含むことができる。
+    //HOW: mapは配列が持っているメソッドで配列があればどこでも使える。
     const {
       data: { items },
     } = await youtube.videos.list({
@@ -150,12 +168,14 @@ router.get('/videos/search/:keyword', (req, res, next) => {
       //NAME: join
       //WHAT: map関数を使用してすべてのIDを取得し、 joinメソッドを使用してそれらをコンマで結合するがでできる。
       //WHY: 配列の全要素が連結された文字列。
-      // HOW: 区切り文字は（ , ）または指定された文字列になる。
+      // HOW: joinは区切り文字に応じて、配列の中身を全て文字列に変換して区切り文字で連結する。
+//       const a = [1, 2, 3];
+// a.join('-') // これの結果は文字列の "1-2-3" になる
     });
     res.json({ items, nextPageToken });
   })().catch(next);
   // NAME:: catch();
-  // WHAT: EXPRESSが同期、または非同期的に発生するエラーをキャッチして処理する方法。
+  // WHAT: expressは関係ない。promiseのthenと同じで、promiseが持つメソッド。
   // WHY: エラーの有無に関わらず、呼び出される。エラーが無ければ二番目のハンドラが呼び出されるため。
   // HOW: nextはコールバックとして提供されているためエラーの有無に関わらず呼び出される。
 });

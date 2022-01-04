@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import axios from 'axios';
 import FavoriteContext from '~/contexts/FavoriteContext';
 import StartIcon from '~/components/atoms/StarIcon';
@@ -40,12 +39,12 @@ const FavoriteButtonContainer = ({
   presenter,
 }) => {
   const { state: { ids: favoriteIds }, dispatch } = useContext(FavoriteContext);
-      //NAME: dispatch
+      //NAME: dispatch(リクエストの代わり)
     //WHAT: stateの値を変更するときに使用する。
     //WHY: actionの前にdispatchで受け取る処理を入れないとサーバーに情報が届かないため。
     //HOW: dispatchというメソッドを用意し、引数でアクションを受けとるようにする。
 
-  
+
     // NAME: useContext:
     //WHAT: 親コンポーネントからpropsで渡されていないのにContextに収容されているデータにアクセスできること。
     //WHY: propsで一つ一つ情報を渡さなくてもContextを使うことでまたいで情報にアクセスできるため。

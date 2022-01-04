@@ -1,9 +1,16 @@
 require('dotenv').config();
+const { query } = require('express');
 const express = require('express');
 const { google } = require('googleapis');
+const { weekdaysShort } = require('moment');
 // const { async } = require('regenerator-runtime');
 
 const { readFavoriteIds, writeFavoriteIds } = require('../utils/favorite');
+
+//NAME: const
+//WHAT: 定数を定義するキーワード。あたいに名前をつけ、コード中名前によって参照できるようにする。定数の目印。こいつは定数だよ！を表す目印。
+// WHY: 定数の値は再代入による定数の変更ができず、再宣言もできない。初期化子が(変数の初期値)必要。変数の値を変更しようとするとコンパイルエラーになる。
+//HOW: constを文頭つけて変数を宣言する。
 
 
 // NAME: express
@@ -30,6 +37,11 @@ const youtube = google.youtube({
 
 const router = express.Router();
 router.get('/videos/search/:keyword', (req, res, next) => {
+//NAME: router.get
+//WHAT: 特定のURLにアクセスした際に、どのファイルを実行するか指定する機能。getはページを読み込むイメージ。
+//WHY: "/"を入れるこでルーとパスを指定する。
+// HOW: expressを利用して、routerへインスタンス化使用する。
+
 //NAME: reqについて
   // WHAT: req=router.getの第一引数で指定されたパスに入ってきたHTTPリクエストを表すオブジェクト。
   //WHY: router.getはGETメソッドでリクエスト受け付けます。
@@ -83,7 +95,7 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 //WHY: データの位置情報を教えてくれるため。
 //HOW: 空のデータを代入して設定する。
 
-// NAME: query;
+// NAME: query
 // WHAT: データベース管理システムにに対する問い合わせ。処理要求。
 // WHY: データの抽出や更新などの処理要求を文字列で表す。
 // HOW: リレーショナルデータベースではSQL使って記述する。
@@ -94,6 +106,16 @@ router.get('/videos/search/:keyword', (req, res, next) => {
 //HOW: 表形式で使い管理する。
 
   (async () => {
+    //NAME: 関数
+    // WHAT: まとまった処理が入っている箱のこと。
+    // WHY: 処理に名前をつけることで、その関数の実行命令がきたら実行する仕組みのこと。
+    // HOW: 変数宣言 変数名 { 処理の内容 } 処理の結果。
+
+    // NAME: 変数
+    // WHAT: 値を仮登録し、各処理に使用する。処理の過程で置き換えや更新が可能な値
+    // WHY: テータを一時的に記憶しておくための領域に固有の名前をつけたもの。
+    // HOW:処理の過程で置き換えや更新が可能な値として取り扱う場合に使用。
+
     // NAME: async/await(非同期関数)宣言名
     // WHAT: 処理を一度バックグラウンドに移すこと""。""
     // WHY:  関数の呼び出しの前にawaitをつけるとdataの値の結果が返ってくるまで待ってくれるため。
@@ -114,16 +136,48 @@ router.get('/videos/search/:keyword', (req, res, next) => {
       maxResults: 20,
       pageToken,
     });
+
+    // const a = [1, 2, 3].map( (a) => a + 1   );
+    // const a = [{ id: { videoId: 1 } }, { id: { videoId: 2 } },, { id: { videoId: 3 } },].map( (a) => a + 1   );
+
+    // b = a[0] // { id: { videoId: 1 } }
+
+    // b.id
+    // const {
+    //   id //{ videoId: 1 }
+    // } = b:
+  
+
     // 動画の情報を取得
     const ids = idItems.map(({ id: { videoId } }) => videoId);
+    // NAME: forEach
+    // WHAT: 配列データに特化した繰り返し処理を簡単に実行できるメソッドになります。
+    //WHY: 配列の中身の値を取り出すときに使用される。
+    //HOW: 配列.forEach(処理)で配列データに対してforEachを実行する。
+
+    //NAME: map
+    // WHAT: 配列を受け取って中身の値を二倍にする。
+    //WHAT: イメージはforEachと一緒。ただfor文と違って、結果の配列を返り値として使えるから、左辺に代入式を書いたり、mapしたあとの結果を使いたいときはfor文を使わずにmapを使う
+    // WHY: map()関数が返す新しい配列を変数(idItems)に格納し、ログに出力する。
+    //HOW: mapは配列が持っているメソッドで配列があればどこでも使える。
     const {
       data: { items },
     } = await youtube.videos.list({
       part: "statistics,snippet",
       id: ids.join(","),
+      //NAME: join
+      //WHAT: map関数を使用してすべてのIDを取得し、 joinメソッドを使用してそれらをコンマで結合するがでできる。
+      //WHY: 配列の全要素が連結された文字列。
+      // HOW: joinは区切り文字に応じて、配列の中身を全て文字列に変換して区切り文字で連結する。
+//       const a = [1, 2, 3];
+// a.join('-') // これの結果は文字列の "1-2-3" になる
     });
     res.json({ items, nextPageToken });
   })().catch(next);
+  // NAME:: catch();
+  // WHAT: expressは関係ない。promiseのthenと同じで、promiseが持つメソッド。
+  // WHY: エラーの有無に関わらず、呼び出される。エラーが無ければ二番目のハンドラが呼び出されるため。
+  // HOW: nextはコールバックとして提供されているためエラーの有無に関わらず呼び出される。
 });
 
 // 追加する
@@ -250,8 +304,6 @@ module.exports = router;
 
 // メソッドの引数の書き方。
 
-
-
-
-
-
+// パラメーターとクエリの違い。
+// params/送られてきた値を受け取るためのメソッド。
+// query/データベース管理システムにに対する問い合わせ。

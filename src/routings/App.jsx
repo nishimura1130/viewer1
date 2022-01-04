@@ -23,12 +23,13 @@ const AppRouting = () => (
       <Route path="/" exact title="トップ" component={TopPage} />
       <Route path="/play/:videoId" title="動画再生" component={PlayerPage} />
       {/* 追加する */}
-      <Route path="/favorites" title="お気に入り" component={FavoritePage} />d
+      <Route path="/favorites" title="お気に入り" component={FavoritePage} />
       {/* ルーターについて 
       WHAT: React routerはUIとURLを同期させるライブラリ。
       WHY: アクセスしたときは住所を表紙するコンポーネントをレンダリングしたりといった操作が可能になる。
       HOW:  localhost:3000->localhost:3000/favoritesにすることでお気に入り機能のURLに行けることができる。
       */}
+  
       <Route path="*" component={NotFoundPage} />
     </Switch>
   </BrowserRouter>

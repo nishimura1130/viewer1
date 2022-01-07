@@ -6,6 +6,8 @@
 // WHY:  ブラウザに表示させるため。
 // HOW:  
 
+const { weekdaysShort } = require("moment");
+
 // const { hasOwnMetadata } = require("core-js/fn/reflect");
 // const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
 // const { weekdaysShort } = require("moment");
@@ -107,4 +109,9 @@
 //NAME: プロパティ
 //WHAT: 
 
-// NAME: 
+// NAME: テンプレートリテラル
+// WHAT: ES6では文字列の連結や定数の締結には「+」を用いていた。
+// WHY: 文字列の中に定数（変数）埋め込むことができる。
+// HOW: (``${ 変数名} ) バッククォテーションで囲み、ダラーと波括弧で記述が可能。
+// const name = "はなくそ"; 
+// console.log (`こんにちは、${ name } さん`);

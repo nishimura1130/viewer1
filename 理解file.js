@@ -121,3 +121,7 @@ const { weekdaysShort } = require("moment");
 //WHY: 処理を分けることができるため。
 // HOW: if whileなどの構文を用いて使用される。
 
+// NAME: if
+// WHAT: もし〇〇ならば△△を行う。という条件分岐が可能になる。
+// WHY: 処理を分けることができるため。
+// HOW: ifの後ろに条件式を書き、それが成り立つ場合の処理を{ }で書く。if(numberが10よりも大きい場合) { console.log("numberは10より大きい"); }

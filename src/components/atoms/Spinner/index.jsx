@@ -27,4 +27,8 @@ export default styled.span`
 `;
 
 // NAME: export default
-// WHAT: 
+// WHAT: そのファイルのデフォルトとして後ろに続くものをexportする。
+// WHY: デフォルトは複数宣言することができないため。
+// HOW: exportされたものと使いたいとき、importする側は任意の名前をつけることができます。それはこれをデフォルトにするよと宣言している。
+
+

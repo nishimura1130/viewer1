@@ -6,9 +6,9 @@
 // WHY:  ブラウザに表示させるため。
 // HOW:  
 
-const { hasOwnMetadata } = require("core-js/fn/reflect");
-const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
-const { weekdaysShort } = require("moment");
+// const { hasOwnMetadata } = require("core-js/fn/reflect");
+// const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
+// const { weekdaysShort } = require("moment");
 
 //npm i express....node.jsで利用できるアプリケーションフレームワーク。railsと同じ。
 //atomicデザインのデータの受け渡しがわからない。
@@ -106,3 +106,5 @@ const { weekdaysShort } = require("moment");
 
 //NAME: プロパティ
 //WHAT: 
+
+// NAME: 

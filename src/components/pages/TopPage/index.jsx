@@ -69,6 +69,11 @@ const TopPageContainer = ({
       return;
     }
     let nextVideos;
+    //NAME: let
+    // WHAT: 変数宣言のうちの一つで論理演算子。
+    // WHY: 上書きが可能な変数宣言、ES6のアップデートで上書きが禁止なconstで定義しようとなる。
+    // HOW: let 変数名 = 文字列; console.log("変数名"); ブラウザで呼び出すことが可能になる。
+    
     if (pageToken) {
       // 重複を取り除く
       const itemsWithoutDuplicated = items.filter(

@@ -196,6 +196,8 @@ router.get("/videos/:videoId", (req, res, next) => {
   })().catch(next);
 });
 
+
+
 // 関連動画取得
 router.get("/videos/:videoId/related", (req, res, next) => {
   const { videoId: relatedToVideoId } = req.params;

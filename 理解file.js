@@ -131,3 +131,11 @@ const { weekdaysShort } = require("moment");
 // WHAT: trueとfalseの二つしか存在しない。
 // HOW: 全ての条件分岐に使用される。
 
+// NAME: 比較演算子
+// WHAT: a < b            aはbより小さい。
+//            a <= b          aの方が小さい、または等しい。
+//            a > b            aはbより大きい。
+//            a >= b          aの方が大きい、または等しい。
+// WHY: 出力時にtrueかfalseで条件分岐をし、処理を実行させるため。
+// HOW: >= , <=の使い方がいまいちわからない。
+

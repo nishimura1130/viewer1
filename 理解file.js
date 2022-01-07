@@ -125,3 +125,9 @@ const { weekdaysShort } = require("moment");
 // WHAT: もし〇〇ならば△△を行う。という条件分岐が可能になる。
 // WHY: 処理を分けることができるため。
 // HOW: ifの後ろに条件式を書き、それが成り立つ場合の処理を{ }で書く。if(numberが10よりも大きい場合) { console.log("numberは10より大きい"); }
+
+// NAME: 真偽値
+// WHAT: 条件式が成り立てばtrue、条件式が成り立たないのであればfalseになる。
+// WHAT: trueとfalseの二つしか存在しない。
+// HOW: 全ての条件分岐に使用される。
+

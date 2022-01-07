@@ -149,3 +149,8 @@ const { weekdaysShort } = require("moment");
 // WHY: 型を定義しない。格納する変数の型が格納した値によって変わるため。
 // HOW: console.log(typeof 変数名);で型がわかる。
 
+// NAME: 静的型付け言語
+// WHAT: 変数の型を決定すること。intで変数宣言を行うとint型でしか主にJavaやGoが挙げられる。
+// WHY: 大規模開発の際、厳密な型定義を行うため。
+// HOW: TypeScriptなどで使用できる。
+

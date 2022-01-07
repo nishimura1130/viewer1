@@ -143,3 +143,9 @@ const { weekdaysShort } = require("moment");
 // WHAT: 左と右の値が等しいかを調べるもの。
 // WHY: 左の値と右の値が等しいか調べるため。
 // HOW: ==で表される。const number = 12; console.log(number == 12;)は等しいためtrueで処理が実行される。
+
+// NAME: 動的型付け言語
+// WHAT: Number(数値), String(文字列), boolean(真偽), Undefined(未定義), Null(空の値), Symbol(ES6から導入)
+// WHY: 型を定義しない。格納する変数の型が格納した値によって変わるため。
+// HOW: console.log(typeof 変数名);で型がわかる。
+

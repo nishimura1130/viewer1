@@ -115,3 +115,9 @@ const { weekdaysShort } = require("moment");
 // HOW: (``${ 変数名} ) バッククォテーションで囲み、ダラーと波括弧で記述が可能。
 // const name = "はなくそ"; 
 // console.log (`こんにちは、${ name } さん`);
+
+// NAME: 条件分岐
+//WHAT:  ある条件が成り立つ時だけ処理を行う。
+//WHY: 処理を分けることができるため。
+// HOW: if whileなどの構文を用いて使用される。
+

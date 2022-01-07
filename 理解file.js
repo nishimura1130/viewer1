@@ -139,3 +139,7 @@ const { weekdaysShort } = require("moment");
 // WHY: 出力時にtrueかfalseで条件分岐をし、処理を実行させるため。
 // HOW: >= , <=の使い方がいまいちわからない。
 
+// NAME: 等価演算子
+// WHAT: 左と右の値が等しいかを調べるもの。
+// WHY: 左の値と右の値が等しいか調べるため。
+// HOW: ==で表される。const number = 12; console.log(number == 12;)は等しいためtrueで処理が実行される。

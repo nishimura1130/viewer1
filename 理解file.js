@@ -202,3 +202,7 @@ const { weekdaysShort } = require("moment");
 // WHAT: JavaScriptの標準規格。（こうゆうルールで書くぜ！)
 // WHY: let,constを用いた変数宣言。アローファンクション。Class構文。分割代入。テンプレート文字列。スプレッド構文。Promiseなどなど。
 
+// NAME: webpack等のモジュールバンドラー
+// WHAT: 複数のjs(css、image)ファイルを一つにまとめたもの。
+// WHY: 本番用にビルドするために一つのファイルにまとめる必要があるため。
+// HOW: 依存関係も判定して、まとめるようにする。

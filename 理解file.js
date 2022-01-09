@@ -6,6 +6,7 @@
 // WHY:  ブラウザに表示させるため。
 // HOW:  
 
+const { hasOwnMetadata } = require("core-js/fn/reflect");
 const { weekdaysShort } = require("moment");
 
 // const { hasOwnMetadata } = require("core-js/fn/reflect");
@@ -168,4 +169,9 @@ const { weekdaysShort } = require("moment");
 // WHAT: 変数を設定すると名前の領域が与えられる。
 // WHY: オブジェクトの状態や特製を表す情報のこと。
 // HOW: console.log(変数名.プロパティ名); でその領域に格納されている、変数に関わる値を取得することができる。
+
+// NAME: Objectについて
+// WHAT: { }を使って初期化を行って、プロパティを格納する方法か、初期化するタイミングで{}の中にプロパティとに値を設定するやり方の二つがある。
+// WHY: keyとvalueで値を設定するため。
+// HOW: const person = { hello:(key) "DIC"(value)}; の設定が一般的。
 

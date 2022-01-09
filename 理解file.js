@@ -187,3 +187,8 @@ const { weekdaysShort } = require("moment");
 // WHAT: JavaScriptのオブジェクトで仮想的に作られたDOM。HTML などを解釈し、木構造で表現したもの。
 // WHY: いきなりDOMを操作せず、JS上で仮想DOMを操作し差分を出してからDOMに反映させるため。
 // HOW: ブラウザの描画は行わず、プログラム上で描画する。
+
+// NAME: package-look.json
+// WHAT: パッケージのインストール時に自動に生成される。
+// WHY: 直接編集してはいけない。削除してはいけない。
+// HOW: 依存関係やバージョンの解決をしてくれる。

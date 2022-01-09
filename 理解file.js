@@ -191,4 +191,9 @@ const { weekdaysShort } = require("moment");
 // NAME: package-look.json
 // WHAT: パッケージのインストール時に自動に生成される。
 // WHY: 直接編集してはいけない。削除してはいけない。
-// HOW: 依存関係やバージョンの解決をしてくれる。
+// HOW: 依存関係やバージョンの解決をしてくれる。packageファイルとpakage-lock.jsonファイルをインストールすると、他の人のパソコンでも同じ環境になる。
+
+// NAME: Node_modules
+// WHAT: 各モジュールの実態。jsファイル。
+// WHY:  gitにはサイズが大きいためあげないこと。
+// HOW: プログラムが動く時はここを見に行く。

@@ -197,3 +197,8 @@ const { weekdaysShort } = require("moment");
 // WHAT: 各モジュールの実態。jsファイル。
 // WHY:  gitにはサイズが大きいためあげないこと。
 // HOW: プログラムが動く時はここを見に行く。
+
+// NAME: ECMAScript(欧州電算機工業会) 
+// WHAT: JavaScriptの標準規格。（こうゆうルールで書くぜ！)
+// WHY: let,constを用いた変数宣言。アローファンクション。Class構文。分割代入。テンプレート文字列。スプレッド構文。Promiseなどなど。
+

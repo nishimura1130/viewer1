@@ -1,4 +1,4 @@
-# YouTube Viewer ( 3 loop )
+# Viewer1 ( 3 loop )
 
 ## Setup 
 
@@ -10,4 +10,6 @@ npm install
 
 ```
 npm start
+node .
 ```
+

@@ -268,4 +268,11 @@ const { weekdaysShort } = require("moment");
 // WHY: typeof で返すことによって値が変わってくる。それ以外はfalse。
 // HOW: typeof 値 値には数値や文字列、オブジェクトの値を指定することによって使用される。
 
-// NAME: 
+// NAME: 倫理演算子( || )
+// const num = null;
+// const fee = num || "金額未設定です。";
+// console.log(fee);
+// "金額未設定です"が出力される。
+// WHAT: || は左側falseとなら右側を返す。
+// WHY: nullはfalse判定されるため。
+// HOW: numの値はnullが入るため、false判定されるため金額未設定が返ってくる。

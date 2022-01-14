@@ -277,7 +277,15 @@ const { weekdaysShort } = require("moment");
 // WHY: nullはfalse判定されるため。
 // HOW: numの値はnullが入るため、false判定されるため金額未設定が返ってくる。
 
+// NAME: イベント
+// WHAT: javascriptにおける「イベント」とは、ウェブページ上で発生するあらゆるアクションの総称です。
+// WHY: ボタンのクリック、マウスポインタを要素の上に合わせること。
+// HOW: イベントとイベントハンドラ(handler)扱う。ページが表示されたときになにかを表示させることなど。
+
 // NAME: EventTarget
 // WHAT: DOMのインターフェースで、イベントを受け取ることやリスナーを持つことができるオブジェクトを実装している。
 // WHY: EventTargetオブジェクトのインスタンス(実態)を生成するため。
 // HOW: Element、document、windowが一般的なイベントターゲットになる。
+
+// NAME: addEventListener
+// WHAT: EventTarget 

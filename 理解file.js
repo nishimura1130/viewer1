@@ -287,5 +287,7 @@ const { weekdaysShort } = require("moment");
 // WHY: EventTargetオブジェクトのインスタンス(実態)を生成するため。
 // HOW: Element、document、windowが一般的なイベントターゲットになる。
 
-// NAME: addEventListener
-// WHAT: EventTarget 
+// NAME: addEventListener(メソッド)
+// WHAT: addEventListener() のメソッドは特定のイベントが配信されるたびに呼び出される関数を設定すること。
+// WHY: 対象になるのはElement,document,windowなどが多い。イベントに対応したあらゆるオブジェクトが対象となる。
+// HOW: document.getElementById("htmlのid").addEventListener("click, () => 変数のonClickAdd()"); 

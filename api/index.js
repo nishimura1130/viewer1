@@ -21,11 +21,6 @@ const { readFavoriteIds, writeFavoriteIds } = require('../utils/favorite');
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 // const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
-
-
-
-
-
 const youtube = google.youtube({
   version: 'v3',
   auth: YOUTUBE_API_KEY,

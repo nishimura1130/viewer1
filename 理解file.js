@@ -269,10 +269,15 @@ const { weekdaysShort } = require("moment");
 // HOW: typeof 値 値には数値や文字列、オブジェクトの値を指定することによって使用される。
 
 // NAME: 倫理演算子( || )
-// const num = null;
+// const num = null;  100で数値だとそのままnumが出力される。
 // const fee = num || "金額未設定です。";
 // console.log(fee);
 // "金額未設定です"が出力される。
 // WHAT: || は左側falseとなら右側を返す。
 // WHY: nullはfalse判定されるため。
 // HOW: numの値はnullが入るため、false判定されるため金額未設定が返ってくる。
+
+// NAME: EventTarget
+// WHAT: DOMのインターフェースで、イベントを受け取ることやリスナーを持つことができるオブジェクトを実装している。
+// WHY: EventTargetオブジェクトのインスタンス(実態)を生成するため。
+// HOW: Element、document、windowが一般的なイベントターゲットになる。

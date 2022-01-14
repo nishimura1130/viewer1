@@ -312,7 +312,10 @@ const { createElement } = require("react");
 // NAME: createElement
 // WHAT: javascriptでDOMを作成するためには、createElement関数を使用する。
 // WHY: htmlのDOMを生成できるため。
-// HOW: const div = document.createElement("div(タグ名)") 
+// HOW: const div = document.createElement("div(タグ名)");
 
-;
+// NAME: appendChild
+// WHAT: 動的にWebサイトに要素を追加したい場合に使用される関数。
+// WHY: タグの下に要素を入れるため。
+// HOW: div.appendChild(li); のように追加したい要素名を入れることでdivの下にli要素が入ることになる。
 

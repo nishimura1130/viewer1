@@ -8,6 +8,7 @@
 
 const { hasOwnMetadata } = require("core-js/fn/reflect");
 const { weekdaysShort } = require("moment");
+const { createElement } = require("react");
 
 // const { hasOwnMetadata } = require("core-js/fn/reflect");
 // const { pagespeedonline } = require("googleapis/build/src/apis/pagespeedonline");
@@ -291,3 +292,27 @@ const { weekdaysShort } = require("moment");
 // WHAT: addEventListener() のメソッドは特定のイベントが配信されるたびに呼び出される関数を設定すること。
 // WHY: 対象になるのはElement,document,windowなどが多い。イベントに対応したあらゆるオブジェクトが対象となる。
 // HOW: document.getElementById("htmlのid").addEventListener("click, () => 変数のonClickAdd()"); 
+
+
+
+
+// NAME: alertの関数の呼ばれ方
+
+// const onClickAdd = () => {
+//   alert();
+// }
+
+// document.
+// getElementById("add-button")
+// .addEventListener("click", ()  => onClickAdd());
+
+// getElementByIdで先ほど付与したid,add-buttonに対して、イベントを付与する。
+// 何かというと、clickイベントで実行するのはonClickAddが呼ばれて,alertが表示されれば成功。・
+
+// NAME: createElement
+// WHAT: javascriptでDOMを作成するためには、createElement関数を使用する。
+// WHY: htmlのDOMを生成できるため。
+// HOW: const div = document.createElement("div(タグ名)") 
+
+;
+

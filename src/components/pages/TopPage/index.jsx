@@ -91,6 +91,7 @@ const TopPageContainer = ({
 
   //NAME: レンダリング
   // WHAT: 現在のpropsとstateを元に、Reactがコンポーネントに対して、それらがどのように見えるべきなのか尋ねるプロセス。
+  //WHAT: ReactコンポーネントからDOMノードを作成するための情報(state,propsの値を含む) の読み込みを行うこと。
   // WHY: 
   // HOW:
 

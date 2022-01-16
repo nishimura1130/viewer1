@@ -319,3 +319,8 @@ const { createElement } = require("react");
 // WHY: タグの下に要素を入れるため。
 // HOW: div.appendChild(li); のように追加したい要素名を入れることでdivの下にli要素が入ることになる。
 
+// NAME: innerText
+// WHAT: innerTextプロパティを参照すると、対象の要素のテキストを取得することができる。
+// WHY:  テキスト値だけでなく、HTML要素も含めた値を取得したり、代入したりできる。
+// WHAT: HTMLElement(html要素).innerText で使用することができる。
+

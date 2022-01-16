@@ -324,3 +324,7 @@ const { createElement } = require("react");
 // WHY:  テキスト値だけでなく、HTML要素も含めた値を取得したり、代入したりできる。
 // WHAT: HTMLElement(html要素).innerText で使用することができる。
 
+// NAME: parentNode
+// WHAT: 親の要素を取得してくれる関数。
+//WHY: 親要素を取得してくれるため。
+// HOW: const 変数（deleteTarget) = deleteButton.parentNode   で親要素を取得することができる。

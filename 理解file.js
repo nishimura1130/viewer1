@@ -328,3 +328,8 @@ const { createElement } = require("react");
 // WHAT: 親の要素を取得してくれる関数。
 //WHY: 親要素を取得してくれるため。
 // HOW: const 変数（deleteTarget) = deleteButton.parentNode   で親要素を取得することができる。
+
+// NAME: removeChild
+// WHAT: 子要素から指定のものを消す場合に使用される。
+// WHY: DOMから子要素を取り除くため。
+// HOW: document.getElementById("指定したHTML要素").removeChild(取得した値);

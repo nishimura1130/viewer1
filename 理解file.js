@@ -329,7 +329,13 @@ const { createElement } = require("react");
 //WHY: 親要素を取得してくれるため。
 // HOW: const 変数（deleteTarget) = deleteButton.parentNode   で親要素を取得することができる。
 
-// NAME: removeChild
+// NAME: appendChild
 // WHAT: 子要素から指定のものを消す場合に使用される。
 // WHY: DOMから子要素を取り除くため。
 // HOW: document.getElementById("指定したHTML要素").removeChild(取得した値);
+
+// NAME: firstElementChild
+// WHAT: 最初の子要素を取得するプロパティ。
+// WHY: Elementオブジェクトの最初の要素を取得するため。
+// HOW: 変数.firstElementChild にすることでhtmlの親要素の一番最初の要素を取得することができる。
+

@@ -343,3 +343,10 @@ const { createElement } = require("react");
 // WHAT: HTMLを解釈せず、そのまま出力するのがtextContent。初期化する役割。
 // WHY: innerHTMLはHTMLはタグの中身を表示するが、タグもそのまま表示させる。
 // HOW: 初期化させたいもの.textContent = null; 初期化させたいものがconsoleでそのまま表示させる。
+
+// NAME: <div id= "root"></div>
+// WHAT: SPA開発ではindex.htmlは一枚で、javascriptで要素を書き換えて画面の遷移で表現していく。
+//  HTMLでどの部分にjavascriptを差し込んでいくかという目印。一番最初にjavascriptを差し込む目印。レンダリングする目印。
+// WHY: src内のindex.jsのgetElementByIdででrootのidを取得して、renderでjsの内容を反映させている。
+// HOW: html内のrootからidを取得し、index.jsのgetElementByIdのrootでidを受け取り、React.DOMでrenderさせている。
+

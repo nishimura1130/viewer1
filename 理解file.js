@@ -358,5 +358,11 @@ const { createElement } = require("react");
 // NAME: JSX記法
 // WHAT: javascriptの中でreturnしてhtmlのタグを書いていくのをJsx記法という。
 // WHY: returnしていくhtmlの内容は一つのタグで囲わなければいけない為。<h1><p>は×
-// HOW: <div><h1><p></p></h1></div>は一つの要素で囲まれている為表示することができる。
+// HOW: <div><h1><p></p></h1></div>は一つの要素で囲まれている為表示することができる。(不要な要素がレンダリングされる。)
+
+// NAME: Fragment
+// WHAT: 画面に一つの要素を囲むことができて、画面にはなにもレンダリングされない。
+// WHY: 不html要素に<React.Fragment>とすることでdivなどの不要な要素をレンダリングしなくなるため。
+// HOW: <React.Fragment>でエラーを回避させたいために使用する。
+
 

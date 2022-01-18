@@ -368,4 +368,9 @@ const { createElement } = require("react");
 // NAME: export default 関数名;
 // WHAT: 他のファイルでも使用できるためにするため。
 // WHY: 他のファイルでも使用できるようにするため。
-// HOW: このファイルとして、export default 関数; の関数が他でもexportします。となる。
+// HOW: 他ファイルで使用する場合はimport 関数名 from "./ファイル名（同じ階層のファイル)";
+
+// NAME: styleの当て方     
+// WHAT: {{ }} jsを一つ目の{}はjsを書くことを表す。二つ目はjsのオブジェクトの{}で中身をstring型で記述していく。
+// WHY: javascriptのオブジェクトなので{}の中身はstringの文字列として記述するため。
+// HOW: <h1 style={{ color: 'red' }}>こんにちは</h1>として記述していくことで<h1>の文字列がredになる。

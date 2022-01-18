@@ -339,3 +339,7 @@ const { createElement } = require("react");
 // WHY: Elementオブジェクトの最初の要素を取得するため。
 // HOW: 変数.firstElementChild にすることでhtmlの親要素の一番最初の要素を取得することができる。
 
+// NAME: textContent
+// WHAT: HTMLを解釈せず、そのまま出力するのがtextContent。初期化する役割。
+// WHY: innerHTMLはHTMLはタグの中身を表示するが、タグもそのまま表示させる。
+// HOW: 初期化させたいもの.textContent = null; 初期化させたいものがconsoleでそのまま表示させる。

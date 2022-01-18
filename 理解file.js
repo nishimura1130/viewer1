@@ -363,6 +363,9 @@ const { createElement } = require("react");
 // NAME: Fragment
 // WHAT: 画面に一つの要素を囲むことができて、画面にはなにもレンダリングされない。
 // WHY: 不html要素に<React.Fragment>とすることでdivなどの不要な要素をレンダリングしなくなるため。
-// HOW: <React.Fragment>でエラーを回避させたいために使用する。
+// HOW: <React.Fragment>でエラーを回避させたいために使用する。<>要素</>でも表示できる。
 
-
+// NAME: export default 関数名;
+// WHAT: 他のファイルでも使用できるためにするため。
+// WHY: 他のファイルでも使用できるようにするため。
+// HOW: このファイルとして、export default 関数; の関数が他でもexportします。となる。

@@ -350,3 +350,8 @@ const { createElement } = require("react");
 // WHY: src内のindex.jsのgetElementByIdででrootのidを取得して、renderでjsの内容を反映させている。
 // HOW: html内のrootからidを取得し、index.jsのgetElementByIdのrootでidを受け取り、React.DOMでrenderさせている。
 
+// NAME: App.js   i
+// WHAT: index.jsでAppファイルを読み込んで、App.js内のファイルを読み込んでいる。
+//  WHY: index.jsからid="root"を受け取り、表示させるため。
+// HOW: index.jsでimportし、App.jsで表示させる。
+

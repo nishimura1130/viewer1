@@ -355,3 +355,8 @@ const { createElement } = require("react");
 //  WHY: index.jsからid="root"を受け取り、表示させるため。
 // HOW: index.jsでimportし、App.jsで表示させる。
 
+// NAME: JSX記法
+// WHAT: javascriptの中でreturnしてhtmlのタグを書いていくのをJsx記法という。
+// WHY: returnしていくhtmlの内容は一つのタグで囲わなければいけない為。<h1><p>は×
+// HOW: <div><h1><p></p></h1></div>は一つの要素で囲まれている為表示することができる。
+

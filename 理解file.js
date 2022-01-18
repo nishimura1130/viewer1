@@ -370,7 +370,12 @@ const { createElement } = require("react");
 // WHY: 他のファイルでも使用できるようにするため。
 // HOW: 他ファイルで使用する場合はimport 関数名 from "./ファイル名（同じ階層のファイル)";
 
-// NAME: styleの当て方     
+// NAME: styleの当て方①
 // WHAT: {{ }} jsを一つ目の{}はjsを書くことを表す。二つ目はjsのオブジェクトの{}で中身をstring型で記述していく。
 // WHY: javascriptのオブジェクトなので{}の中身はstringの文字列として記述するため。
 // HOW: <h1 style={{ color: 'red' }}>こんにちは</h1>として記述していくことで<h1>の文字列がredになる。
+
+// NAME: styleの当て方②
+// WHAT: オブジェクトの変数を定義して中にcssのプロパティを書いていき、それをstyleの中に入れて反映させていくやり方。
+// WHY: 変数を定義しないとstyleに反映できないため。
+// HOW: 変数でstyleの中身を決めていく。<p style={contentStyle}>なんやねん</p> pタグの中身が変更される。

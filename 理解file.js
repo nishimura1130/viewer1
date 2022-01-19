@@ -379,3 +379,15 @@ const { createElement } = require("react");
 // WHAT: オブジェクトの変数を定義して中にcssのプロパティを書いていき、それをstyleの中に入れて反映させていくやり方。
 // WHY: 変数を定義しないとstyleに反映できないため。
 // HOW: 変数でstyleの中身を決めていく。<p style={contentStyle}>なんやねん</p> pタグの中身が変更される。
+
+// NAME: props①
+// WHAT: コンポーネントに渡す引数。タグの中にpropsとして渡したい名称を書いていく。
+// WHY: コンポーネントに名前をつけて、＝で要素を渡していくことでコンポーネントに対してpropsを渡していくことができる。
+// HOW: 表示させたいファイルに<コンポーネントのファイル名 color= "blue"
+//           componentsファイルに変数を指定することでpropsを受け取ることができる。
+
+
+// NAME: children
+// WHAT: コンポーネントのタグにタグで囲った中身を渡すとchildrenという変数に入るため。
+// WHY: タグで囲った中身をそのまま渡すとchildrenという特別な変数に渡すことができ、タグの中身が表示できるため。
+// HOW: propsの要素を{props.変数} => {props.children}にすることでタグの中身が表示することができる。

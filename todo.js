@@ -1,3 +1,5 @@
+// javascriptでTODOアプリを作成
+
 // htmlのcode
 // <!DOCTYPE html>
 // <html lang="ja">

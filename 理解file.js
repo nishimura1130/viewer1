@@ -391,3 +391,4 @@ const { createElement } = require("react");
 // WHAT: コンポーネントのタグにタグで囲った中身を渡すとchildrenという変数に入るため。
 // WHY: タグで囲った中身をそのまま渡すとchildrenという特別な変数に渡すことができ、タグの中身が表示できるため。
 // HOW: propsの要素を{props.変数} => {props.children}にすることでタグの中身が表示することができる。
+

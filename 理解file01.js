@@ -6,4 +6,6 @@
 // NAME: useState
 // WHAT: reactの中に入っているので分割代入する。中身からuseStateを取り出す。
 // WHY: useStateの中から使っていく変数を設定していくため。
-// HOW: const [num(stateで使用していく変数名), setNum(stateを変更するための関数)] = useState(初期値)
+// HOW: const [num(stateで使用していく変数名), setNum(stateを変更するための関数)] = useState(初期値);
+
+// NAME: 

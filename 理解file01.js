@@ -8,4 +8,8 @@
 // WHY: useStateの中から使っていく変数を設定していくため。
 // HOW: const [num(stateで使用していく変数名), setNum(stateを変更するための関数)] = useState(初期値);
 
-// NAME: 
+// NAME: export
+// WHAT: 通常のexportはimportする場合、分割代入を行う。
+// WHY: 文頭にexportの場合、名称を指定していないためエラーになる。
+//HOW: export defaultよりも exportしimportで分割代入を行うやり方の方が名称指定しているため、ファイルでのエラーが見つけやすいことがあるため。
+

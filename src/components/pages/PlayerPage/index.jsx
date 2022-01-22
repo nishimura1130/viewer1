@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
-
 import VideosListTemplate from '~/components/templates/VideoPlayerTemplate';
 import Header from '~/components/organisms/Header';
 import VideoInfo from '~/components/organisms/VideoInfo';

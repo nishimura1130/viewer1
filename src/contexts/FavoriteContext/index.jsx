@@ -53,3 +53,4 @@ FavoriteProvider.defaultProps = {
 };
 
 export default FavoriteContext;
+

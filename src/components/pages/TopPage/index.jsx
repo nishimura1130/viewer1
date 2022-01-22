@@ -1,9 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-
-// ここを追加する
 import axios from 'axios';
-
 import VideosListTemplate from '~/components/templates/VideosListTemplate';
 import Header from '~/components/organisms/Header';
 import SearchForm from '~/components/organisms/SearchForm';
@@ -40,7 +37,6 @@ TopPagePresenter.defaultProps = {
   defaultKeyword: '',
 };
 
-// ここから追加修正
 const TopPageContainer = ({
   api,
   presenter,

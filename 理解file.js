@@ -33,8 +33,6 @@ const { createElement } = require("react");
 // NAME: module・・・部品（組み合わせて使用する）
 // 進捗と相談することにする。
 
-
-
 //コンポネーントの使い方
 // import 輸入
 // export 輸出
@@ -192,7 +190,7 @@ const { createElement } = require("react");
 // NAME: package-look.json
 // WHAT: パッケージのインストール時に自動に生成される。
 // WHY: 直接編集してはいけない。削除してはいけない。
-// HOW: 依存関係やバージョンの解決をしてくれる。packageファイルとpakage-lock.jsonファイルをインストールすると、他の人のパソコンでも同じ環境になる。
+// HOW: 依存関係やバージョンの解決をしてくれる。packageファイルとpackage-lock.jsonファイルをインストールすると、他の人のパソコンでも同じ環境になる。
 
 // NAME: Node_modules
 // WHAT: 各モジュールの実態。jsファイル。
@@ -396,4 +394,9 @@ const { createElement } = require("react");
 // WHAT: 第二引数の中に変数を設定するとその変数の値が変化したときだけ知らせる。consoleの中の処理を実行できる。
 // WHY: useEffectに渡された関数はレンダーの結果が画面に反映された後に動作するため。
 // HOW: 第一引数には実行させたい副作用関数を記述し、第二引数には副作用関数の実行タイミングを制御する依存データを記述。
+
+// NAME: length
+// WHAT: 配列の要素数を返す関数。
+// WHY: 配列が〜個以上という条件の時に返すため。
+// HOW: 配列の中身が5個以上になった時に {incompleteTodos.length >= 5 &&(左がtrueの時に右辺を返す) 条件 }
 

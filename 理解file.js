@@ -400,3 +400,35 @@ const { createElement } = require("react");
 // WHY: 配列が〜個以上という条件の時に返すため。
 // HOW: 配列の中身が5個以上になった時に {incompleteTodos.length >= 5 &&(左がtrueの時に右辺を返す) 条件 }
 
+
+
+
+
+// stateの作り方
+// import {useState} from "react";
+// import "./styles.css";
+
+// export default function App() {
+//   const [count, setCount] = useState(0);
+
+//   const onClickCountUp = () => {
+//     setCount(count + 1);
+//   }
+
+//   return (
+//     <div className="App">
+//       <h1>Hello CodeSandbox</h1>
+//       <h2>Start editing to see some magic happen!</h2>
+//       <p>{count}</p>
+//       <button onClick={onClickCountUp}>西原将輝</button>
+//     </div>
+//   );
+// }
+// ①useStateで初期値0の数値を持ったstateを定義していく。
+// const [count, setCount] = useState(0);
+// ②画面にstateを表示させる。
+{/* <p>{count}</p> */}
+// ③数値をカウントアップするボタンを作成する。数値がカウントアップするクリックイベントを割り当てていく。
+{/* <button onClick={{onclickCountUp}}>カウントアップ</button> */}
+// ④アロー関数を書いて、setCountの関数を呼んでカウントアップができる。
+// const onclickCountUp = () => { setCount(count + 1); }

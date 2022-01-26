@@ -42,3 +42,13 @@ const { weekdaysShort } = require("moment");
 // WHAT: react-router-domの中にある。このコンポーネントで囲った配下にルーティングを有効にする。
 // WHY:  reactルーターのルーティングの機能が有効化されないため。
 // HOW: 関数のreturnないに <BrowserRouter>を記述する。
+
+// NAME: Link
+// WHAT: HTMLでいう<a>タグのようなもの。
+// WHY: 画面遷移をさせるため。import時、必ずつけること。
+// HOW: ページさせたい箇所に<Link to="/"></Link>を囲い、表現させる。ルートのパスになる。ホームの画面に戻れる。
+
+// NAME: Switch
+// WHAT: どのパスの場合にどのコンポーネントを出していくかを設定するため。
+// WHY: Switchの中にルートにマッチしたものを表示していくという処理をしないといけないため。
+// HOW: <Switch><Route path="page1"><Page1 /></Route></Switch>のようにPage1コンポーネントを表示するようにする。

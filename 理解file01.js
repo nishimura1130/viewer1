@@ -3,6 +3,7 @@
 // WHY: 様々なデータを取得して画面を表示させるため、その際に動的に変わる部分をstateとして定義することで様々な状態を表示していくことができる。
 // HOW: コンポーネント内で使用できる値のこと。値が変更されるとrenderが走る。
 
+const hasOwnMetadata = require("core-js/library/fn/reflect/es7/has-own-metadata'");
 const { weekdaysShort } = require("moment");
 
 // const hasOwnMetadata = require("core-js/library/fn/reflect/es7/has-own-metadata'");
@@ -52,3 +53,8 @@ const { weekdaysShort } = require("moment");
 // WHAT: どのパスの場合にどのコンポーネントを出していくかを設定するため。
 // WHY: Switchの中にルートにマッチしたものを表示していくという処理をしないといけないため。
 // HOW: <Switch><Route path="page1"><Page1 /></Route></Switch>のようにPage1コンポーネントを表示するようにする。
+
+// NAME: exact
+// WHAT: trueかfalseを設定するもの。完全一致したものを対象にするかというもの。
+// WHY: v5まではexactの記述は必要だったが、v6になってからデフォルトが完全一致になったため、記述の必要がなくなった。
+// HOW: 

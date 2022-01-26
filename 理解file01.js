@@ -3,7 +3,9 @@
 // WHY: 様々なデータを取得して画面を表示させるため、その際に動的に変わる部分をstateとして定義することで様々な状態を表示していくことができる。
 // HOW: コンポーネント内で使用できる値のこと。値が変更されるとrenderが走る。
 
-const hasOwnMetadata = require("core-js/library/fn/reflect/es7/has-own-metadata'");
+const { weekdaysShort } = require("moment");
+
+// const hasOwnMetadata = require("core-js/library/fn/reflect/es7/has-own-metadata'");
 
 // NAME: useState
 // WHAT: reactの中に入っているので分割代入する。中身からuseStateを取り出す。
@@ -35,3 +37,8 @@ const hasOwnMetadata = require("core-js/library/fn/reflect/es7/has-own-metadata'
 // WHAT: コンポーネントに対応するような形でcssファイルを用意して、読み込んでコンポーネントの中で使っていくもの。
 // WHY: 純粋なcssなためきゃめるケースや変換を行わず書くことができる。
 // HOW: CssModules.jsxとCSSModules.module.scssを使用し、CSSModules.module.scssに普通のcss記法で記載していく。
+
+// NAME: BrowserRouter
+// WHAT: react-router-domの中にある。このコンポーネントで囲った配下にルーティングを有効にする。
+// WHY:  reactルーターのルーティングの機能が有効化されないため。
+// HOW: 関数のreturnないに <BrowserRouter>を記述する。

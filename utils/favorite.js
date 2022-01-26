@@ -63,5 +63,3 @@ module.exports.writeFavoriteIds = (favoriteIds) => new Promise((resolve, reject)
 //NAME: リデューサー
 //WHAT: useReducerを使って引数にアクションを渡す。
 // WHY: reducer定義ファイルでactionごとにどのようにstoreを変更するか記述することで、親コンポーネントであるProviderの値をpropsのバケツリレー無しで書き換えができるのがメリット
-
-

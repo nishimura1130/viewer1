@@ -3,6 +3,8 @@
 // WHY: 様々なデータを取得して画面を表示させるため、その際に動的に変わる部分をstateとして定義することで様々な状態を表示していくことができる。
 // HOW: コンポーネント内で使用できる値のこと。値が変更されるとrenderが走る。
 
+const hasOwnMetadata = require("core-js/library/fn/reflect/es7/has-own-metadata'");
+
 // NAME: useState
 // WHAT: reactの中に入っているので分割代入する。中身からuseStateを取り出す。
 // WHY: useStateの中から使っていく変数を設定していくため。
@@ -24,3 +26,12 @@
 // WHY: propsが変更しない限り再レンダリングさせないため。
 // HOW: memoでコンポーネント全体を囲う。
 
+// NAME: useCallback
+// WHAT: 処理が変わらない場合は同じものを使い回す。再レンダリング
+// WHY: 処理が変わらない場合は同じものを使い回す指示する。
+// HOW: アロー関数をuseCallbackで囲う。useEffectと同じで第二引数に配列で値を設定できる。第二引数を空にすると最初に設定したものを使い回すという設定になる。
+
+// NAME: CSS modules
+// WHAT: コンポーネントに対応するような形でcssファイルを用意して、読み込んでコンポーネントの中で使っていくもの。
+// WHY: 純粋なcssなためきゃめるケースや変換を行わず書くことができる。
+// HOW: CssModules.jsxとCSSModules.module.scssを使用し、CSSModules.module.scssに普通のcss記法で記載していく。
